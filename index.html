@@ -1,0 +1,264 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1, user-scalable=no">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+</head>
+
+<body class="antialiased hover:subpixel-antialiased ">
+    <section class="hero-bg h-screen">
+        <header>
+            <nav>
+                <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                    <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+                        <img draggable="false" src="./assets/img/logo/full_logo_white.png" class="md:h-10 h-8" alt="Flowbite Logo" />
+                    </a>
+                    <div class="flex md:order-2 sp ace-x-3 md:space-x-0 rtl:space-x-reverse">
+                        <button type="button" class="md:block hidden text-white bg-none border-2 hover:bg-gray-50 transaction duration-300 hover:text-gray-900 font-medium text-sm px-4 py-2 text-center">Get
+                            started!</button>
+                        <button data-collapse-toggle="navbar-cta" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-200  rounded-md md:hidden hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-cta"
+                            aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+                            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 17 14">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+                        <ul class="flex flex-col font-medium text-sm text-white p-4 md:p-0 mt-4 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 border-2 md:rounded-none rounded-md border-gray-100">
+                            <li>
+                                <a href="#" class="block py-2 px-3 md:p-0 md:hover:bg-transparent hover:bg-gray-50 md:hover:text-white hover:text-black md:rounded-none rounded-md " aria-current="page">Home</a>
+                            </li>
+                            <li>
+                                <a href="#about" class="block py-2 px-3 md:p-0 md:hover:bg-transparent hover:bg-gray-50 md:hover:text-white hover:text-black md:rounded-none rounded-md ">About</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 px-3 md:p-0 md:hover:bg-transparent hover:bg-gray-50 md:hover:text-white hover:text-black md:rounded-none rounded-md ">Services</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 px-3 md:p-0 md:hover:bg-transparent hover:bg-gray-50 md:hover:text-white hover:text-black md:rounded-none rounded-md ">Products</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block py-2 px-3 md:p-0 md:hover:bg-transparent hover:bg-gray-50 md:hover:text-white hover:text-black md:rounded-none rounded-md ">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <section class="text-white">
+            <div class="relative grid w-full h-auto lg:h-[38rem] place-items-center flex items-center justify-center md:px-0 px-2">
+                <div class="flex flex-col items-center mx-auto text-center gap-12" data-aos="fade-down" data-aos-once="true" data-aos-delay="50">
+                    <h1 class="md:text-6xl text-3xl font-bold text-white uppercase mt-24">Your Saar to Tech
+                        <span>
+                            Excellence!
+                            <svg class="nectar-scribble squiggle-underline-2" role="presentation"
+                                viewBox="-320 -70.8161 640.4 59.82" preserveAspectRatio="none">
+                                <path style="animation-duration: 2.1s;"
+                                    d="M-300,-56 C-50,-72 298,-65 300,-59 C332,-53 -239,-36 -255,-27 C-271,-18 -88,-24 91,-20"
+                                    stroke="#FFFFFF" pathLength="1" stroke-width="2" fill="none"></path>
+                            </svg>
+                        </span>
+                    </h1>
+
+                    <div class="grid grid-cols-4 md:grid-cols-4 items-center justify-between md:gap-4 w-full py-4 clients text-xs md:text-sm">
+                        <div class="flex flex-col items-center justify-center">
+                            <div class="flex items-center justify-center gap-1 md:text-2xl text-lg font-medium">
+                                <span class="count">70</span>+
+                            </div>
+                            <p>
+                                Satisfied Clients
+                            </p>
+                        </div>
+
+                        <div class="flex flex-col items-center justify-center">
+                            <div class="flex items-center justify-center gap-1 md:text-2xl text-lg font-medium">
+                                <span class="count">50</span>+
+                            </div>
+                            <p class="md:block hidden">
+                                Successfully Completed Projects
+                            </p>
+                            <p class="md:hidden block">
+                                Completed Projects
+                            </p>
+                        </div>
+
+                        <div class="flex flex-col items-center justify-center">
+                            <div class="flex items-center justify-center gap-1 md:text-2xl text-lg font-medium">
+                                <span class="count">25</span>+
+                            </div>
+                            <p class="md:block hidden">
+                                Startups Partnered With
+                            </p>
+                            <p class="md:hidden block">
+                                Helped Startups
+                            </p>
+                        </div>
+
+                        <div class="flex flex-col items-center justify-center">
+                            <div class="flex items-center justify-center gap-1 md:text-2xl text-lg font-medium">
+                                <span class="count">250</span>+
+                            </div>
+                            <p class="md:block hidden">
+                                Active EZDial Users
+                            </p>
+                            <p class="md:hidden block">
+                                EZDial Users
+                            </p>
+                        </div>
+                    </div>
+                    <script>
+                        $('.count').each(function() {
+                            $(this).prop('Counter', 0).animate({
+                                Counter: $(this).text()
+                            }, {
+                                duration: 4000,
+                                easing: 'swing',
+                                step: function(now) {
+                                    $(this).text(Math.ceil(now));
+                                }
+                            });
+                        });
+                    </script>
+
+                    <div class="flex flex-col justify-center items-center mt-6">
+                        <p class="text-lg leading-5 text-white">Let’s begin the journey.</p>
+                        <a href="#about" class="mt-8 cursor-pointer animate-bounce"><svg width="53" height="53"
+                                viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M22.41 23.2875L27 27.8675L31.59 23.2875L33 24.6975L27 30.6975L21 24.6975L22.41 23.2875Z"
+                                    fill="white"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+    <main class="flex flex-col gap-28 border-t-2">
+        <section id="about" class="flex flex-col gap-12 items-center justify-center mx-auto mt-12 px-12">
+            <h1 class="text-3xl text-gray-100 font-medium uppercase text-center" data-aos="flip-up" data-aos-one="true" data-aos-delay="50">
+                Who We Are ?
+            </h1>
+            <div class="grid md:grid-cols-2 grid-cols-1 md:gap-4 gap-4">
+                <div class="w-full flex items-center justify-center" data-aos="fade-right" data-aos-once="true" data-aos-delay="50">
+                    <img draggable="false" src="./assets/img/hero/about.png" class="w-1/2" alt="about_hero">
+                </div>
+                <div data-aos="fade-left" data-aos-once="true" data-aos-delay="50">
+                    <h1 class="text-4xl text-gray-200 font-semibold">techsaar.co.in</h1>
+                    <p class="text-md text-gray-300 font-normal">Your one-stop destination for cutting-edge technology solutions and digital services. Founded with a vision to empower businesses with innovative technology, we specialize in delivering top-notch software solutions and comprehensive
+                        digital services tailored to your unique needs. With a team of seasoned professionals and tech enthusiasts, we are committed to driving growth and success for our clients in today's fast-paced digital world.
+                        <br>
+                        <br> From software development and tech support to digital marketing and social media management, we offer a wide range of services to help businesses thrive and stay ahead of the curve. At techsaar, we believe in the power echnology
+                        to transform businesses and drive positive change.
+                        <br>
+                        <br> Our mission is to empower organizations of all sizes with the tools and expertise they need to achieve their goals and reach new heights of success in the digital age. Partner with techsaar today and let us help you unlock
+                        the full potential of technology for your business!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="flex flex-col gap-8 items-center justify-center mx-auto px-12">
+                <h1 class="text-3xl text-gray-100 font-medium uppercase text-center" data-aos="flip-up" data-aos-one="true" data-aos-delay="50">
+                    What We Do At techsaar.co.in ?
+                </h1>
+                <p class="max-w-screen-lg text-md text-gray-300 font-normal text-center ">At techsaar, we are dedicated to providing a comprehensive suite of cutting-edge technology solutions and digital services designed to empower busies in today's fast-paced digital world. Our seasoned professionals and tech enthusiasts
+                    specialize in delivering top-notch services tailored to your unique needs. Here’s how we can help your busin thrive and stay ahead of the curve.
+                </p>
+
+                <div class="grid md:grid-cols-2 grid-cols-1 md:gap-4 gap-4 py-12">
+
+                    <div class="flex flex-col gap-6 w-full">
+                        <div class="w-full h-auto flex items-center gap-2 justify-between mx-auto border p-2">
+                            <span class="w-6 h-full p-1 hero-bg"></span>
+                            <div class="flex flex-col">
+                                <h4 class="font-medium text-gray-200">
+                                    We Provide Software Development
+                                </h4>
+                                <p class="text-xs text-gray-300 ">Our expert team develops custom software solutions to meet your specific business requirements. From initial concept through to deployment, we ensure your software enhances efficiency and drives growth.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w-full h-auto flex items-center gap-2 justify-between mx-auto border p-2">
+                            <span class="w-6 h-full p-1 bg-white"></span>
+                            <div class="flex flex-col">
+                                <h4 class="font-medium text-gray-200">
+                                    We Provide Tech Support
+                                </h4>
+                                <p class="text-xs text-gray-300 ">We offer reliable tech support services to keep your operations running smoothly. Our team is on hand to troubleshoot issues, perform regular maintenance, and ensure your technology infrastructure is secure and up-to-date.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w-full h-auto flex items-center gap-2 justify-between mx-auto border p-2">
+                            <span class="w-6 h-full p-1 hero-bg"></span>
+                            <div class="flex flex-col">
+                                <h4 class="font-medium text-gray-200">
+                                    We help Startup Growth
+                                </h4>
+                                <p class="text-xs text-gray-300 ">From ideation and product development to market strategy and scaling, our comprehensive services cover every stage of your journey. We offer expert guidance in digital marketing, branding and ongoing tech maintenance to
+                                    transform your vision into a thriving business.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w-full h-auto flex items-center gap-2 justify-between mx-auto border p-2">
+                            <span class="w-6 h-full p-1 bg-white"></span>
+                            <div class="flex flex-col">
+                                <h4 class="font-medium text-gray-200">
+                                    We Provide Outbound VOIP Auto Dialer
+                                </h4>
+                                <p class="text-xs text-gray-300 ">We provide cutting-edge outbound VOIP auto dialer solutions designed to enhance your communication efficiency. Our VOIP auto dialer automates outbound calls, allowing you to reach a large audience quickly and effectively.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="./assets/img/hero/about_hero.png" alt="">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js "></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js "></script>
+
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+
+
+
+</html>
