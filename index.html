@@ -10,6 +10,8 @@
     <link href="./assets/css/style.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
 </head>
 
 <body class="antialiased hover:subpixel-antialiased ">
@@ -149,16 +151,17 @@
 
     <main class="flex flex-col gap-28 border-t-2">
         <section id="about" class="flex flex-col gap-12 items-center justify-center mx-auto mt-12 px-12">
-            <h1 class="text-3xl text-gray-100 font-medium uppercase text-center" data-aos="flip-up" data-aos-one="true" data-aos-delay="50">
+            <h1 class="text-3xl text-gray-100 font-medium uppercase text-center" data-aos="flip-up" data-aos-delay="50">
                 Who We Are ?
             </h1>
             <div class="grid md:grid-cols-2 grid-cols-1 md:gap-4 gap-4">
-                <div class="w-full flex items-center justify-center" data-aos="fade-right" data-aos-once="true" data-aos-delay="50">
-                    <img draggable="false" src="./assets/img/hero/about.png" class="w-1/2" alt="about_hero">
+                <div class="w-full flex items-center justify-center" style="background-image: url(./assets/img/hero/graph.png); background-repeat: no-repeat; background-size: cover;" data-aos="fade-right" data-aos-delay="50">
+                    <img draggable="false" src="./assets/img/logo/ICON_WHITE.png" class="w-1/2" alt="about_hero">
                 </div>
-                <div data-aos="fade-left" data-aos-once="true" data-aos-delay="50">
-                    <h1 class="text-4xl text-gray-200 font-semibold">techsaar.co.in</h1>
-                    <p class="text-md text-gray-300 font-normal">Your one-stop destination for cutting-edge technology solutions and digital services. Founded with a vision to empower businesses with innovative technology, we specialize in delivering top-notch software solutions and comprehensive
+                <div>
+                    <h1 data-aos="fade-left" data-aos-delay="50" class="text-4xl text-gray-200 font-semibold">
+                        techsaar.co.in</h1>
+                    <p data-aos="fade-left" data-aos-delay="100" class="text-md text-gray-300 font-normal">Your one-stop destination for cutting-edge technology solutions and digital services. Founded with a vision to empower businesses with innovative technology, we specialize in delivering top-notch software solutions and comprehensive
                         digital services tailored to your unique needs. With a team of seasoned professionals and tech enthusiasts, we are committed to driving growth and success for our clients in today's fast-paced digital world.
                         <br>
                         <br> From software development and tech support to digital marketing and social media management, we offer a wide range of services to help businesses thrive and stay ahead of the curve. At techsaar, we believe in the power echnology
@@ -173,17 +176,16 @@
 
         <section>
             <div class="flex flex-col gap-8 items-center justify-center mx-auto px-12">
-                <h1 class="text-3xl text-gray-100 font-medium uppercase text-center" data-aos="flip-up" data-aos-one="true" data-aos-delay="50">
+                <h1 class="text-3xl text-gray-100 font-medium uppercase text-center" data-aos="flip-up" data-aos-delay="50">
                     What We Do At techsaar.co.in ?
                 </h1>
-                <p class="max-w-screen-lg text-md text-gray-300 font-normal text-center ">At techsaar, we are dedicated to providing a comprehensive suite of cutting-edge technology solutions and digital services designed to empower busies in today's fast-paced digital world. Our seasoned professionals and tech enthusiasts
+                <p class="max-w-screen-lg text-md text-gray-300 font-normal text-center" data-aos="flip-down" data-aos-delay="100">At techsaar, we are dedicated to providing a comprehensive suite of cutting-edge technology solutions and digital services designed to empower busies in today's fast-paced digital world. Our seasoned professionals and tech enthusiasts
                     specialize in delivering top-notch services tailored to your unique needs. Here’s how we can help your busin thrive and stay ahead of the curve.
                 </p>
 
                 <div class="grid md:grid-cols-2 grid-cols-1 md:gap-4 gap-4 py-12">
-
                     <div class="flex flex-col gap-6 w-full">
-                        <div class="w-full h-auto flex items-center gap-2 justify-between mx-auto border p-2">
+                        <div data-aos="fade-right" data-aos-delay="100" class="w-full h-auto flex items-center gap-2 justify-between mx-auto border p-2">
                             <span class="w-6 h-full p-1 hero-bg"></span>
                             <div class="flex flex-col">
                                 <h4 class="font-medium text-gray-200">
@@ -193,7 +195,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="w-full h-auto flex items-center gap-2 justify-between mx-auto border p-2">
+                        <div data-aos="fade-right" data-aos-delay="150" class="w-full h-auto flex items-center gap-2 justify-between mx-auto border p-2">
                             <span class="w-6 h-full p-1 bg-white"></span>
                             <div class="flex flex-col">
                                 <h4 class="font-medium text-gray-200">
@@ -203,7 +205,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="w-full h-auto flex items-center gap-2 justify-between mx-auto border p-2">
+                        <div data-aos="fade-right" data-aos-delay="200" class="w-full h-auto flex items-center gap-2 justify-between mx-auto border p-2">
                             <span class="w-6 h-full p-1 hero-bg"></span>
                             <div class="flex flex-col">
                                 <h4 class="font-medium text-gray-200">
@@ -214,7 +216,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="w-full h-auto flex items-center gap-2 justify-between mx-auto border p-2">
+                        <div data-aos="fade-right" data-aos-delay="250" class="w-full h-auto flex items-center gap-2 justify-between mx-auto border p-2">
                             <span class="w-6 h-full p-1 bg-white"></span>
                             <div class="flex flex-col">
                                 <h4 class="font-medium text-gray-200">
@@ -225,13 +227,215 @@
                             </div>
                         </div>
                     </div>
-                    <img src="./assets/img/hero/about_hero.png" alt="">
+                    <div>
+                        <img src="./assets/img/hero/about_hero.svg" class="w-full h-full" alt="">
+                    </div>
                 </div>
 
             </div>
 
         </section>
 
+
+        <section>
+            <div class="flex flex-col gap-8 items-center justify-center mx-auto px-12">
+                <h1 class="text-3xl text-gray-100 font-medium uppercase text-center" data-aos="flip-up" data-aos-delay="50">
+                    What Our Partners Are Saying ?
+                </h1>
+                <div class="grid grid-cols-3 gap-4 text-gray-100">
+                    <div data-aos="fade-right" data-aos-delay="100" class="w-full h-auto grid grid-cols-3 items-center gap-2 justify-between mx-auto border p-2">
+                        <div class="w-full h-full bg-gray-50 flex items-center justify-center p-2">
+                            <img draggable="false" src="./assets/img/clients/aaa.png" class="w-full" alt="">
+                        </div>
+                        <div class="flex flex-col gap-2 col-span-2">
+                            <h4 class="font-medium text-gray-200">
+                                Outstanding Customer Service
+                            </h4>
+                            <span class="flex items-center">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star-half'></i>
+                            </span>
+                            <p class="text-xs text-gray-300 ">
+                                TechSaar’s customer service is outstanding. They are always available to troubleshoot issues and provide timely support. ~AAA-Manegement - New Delhi
+                            </p>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-right" data-aos-delay="100" class="w-full h-auto grid grid-cols-3 items-center gap-2 justify-between mx-auto border p-2">
+                        <div class="w-full h-full bg-gray-50 flex items-center justify-center p-2">
+                            <img draggable="false" src="./assets/img/clients/kp.png" class="w-full" alt="">
+                        </div>
+                        <div class="flex flex-col gap-2 col-span-2">
+                            <h4 class="font-medium text-gray-200">
+                                Transformative Technology Solutions
+                            </h4>
+                            <span class="flex items-center">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                            </span>
+                            <p class="text-xs text-gray-300 ">
+                                TechSaar has been a game-changer for our pathology lab. Their innovative software solutions and exceptional tech support have significantly improved our operational efficiency and accuracy. ~Kumar Pathology Clinic - Roorkee
+                            </p>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-right" data-aos-delay="100" class="w-full h-auto grid grid-cols-3 items-center gap-2 justify-between mx-auto border p-2">
+                        <div class="w-full h-full bg-gray-50 flex items-center justify-center p-2">
+                            <img draggable="false" src="./assets/img/clients/ds.png" class="w-full" alt="">
+                        </div>
+                        <div class="flex flex-col gap-2 col-span-2">
+                            <h4 class="font-medium text-gray-200">
+                                Reliable and Professional
+                            </h4>
+                            <span class="flex items-center">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                            </span>
+                            <p class="text-xs text-gray-300 ">
+                                The team at TechSaar is incredibly reliable and professional. Their digital marketing strategies have boosted our online presence ~D.S. Mart - Dehradun
+                            </p>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-right" data-aos-delay="100" class="w-full h-auto grid grid-cols-3 items-center gap-2 justify-between mx-auto border p-2">
+                        <div class="w-full h-full bg-gray-50 flex items-center justify-center p-2">
+                            <img draggable="false" src="./assets/img/clients/aurBatao.png" class="w-full" alt="">
+                        </div>
+                        <div class="flex flex-col gap-2 col-span-2">
+                            <h4 class="font-medium text-gray-200">
+                                Exceptional E-commerce Development
+                            </h4>
+                            <span class="flex items-center">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                            </span>
+                            <p class="text-xs text-gray-300 ">
+                                TechSaar built an outstanding e-commerce store for our clothing brand. Their expertise in web development and design has provided us with a platform that is both visually appealing and highly functional ~AurBataoo.com - Delhi
+                            </p>
+                        </div>
+                    </div>
+                    <div data-aos="fade-right" data-aos-delay="100" class="w-full h-auto grid grid-cols-3 items-center gap-2 justify-between mx-auto border p-2">
+                        <div class="w-full h-full bg-gray-50 flex items-center justify-center p-2">
+                            <img draggable="false" src="./assets/img/clients/em.png" class="w-full" alt="">
+                        </div>
+                        <div class="flex flex-col gap-2 col-span-2">
+                            <h4 class="font-medium text-gray-200">
+                                Professional and Responsive
+                            </h4>
+                            <span class="flex items-center">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                            </span>
+                            <p class="text-xs text-gray-300 ">
+                                The TechSaar team is highly professional and responsive. They have been instrumental in driving traffic to our e-commerce site through targeted digital marketing efforts. ~E-Mart99.in - Dehradun
+                            </p>
+                        </div>
+                    </div>
+                    <div data-aos="fade-right" data-aos-delay="100" class="w-full h-auto grid grid-cols-3 items-center gap-2 justify-between mx-auto border p-2">
+                        <div class="w-full h-full bg-gray-50 flex items-center justify-center p-2">
+                            <img draggable="false" src="./assets/img/clients/gm.png" class="w-full" alt="">
+                        </div>
+                        <div class="flex flex-col gap-2 col-span-2">
+                            <h4 class="font-medium text-gray-200">
+                                Exceptional EdTech Solutions
+                            </h4>
+                            <span class="flex items-center">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                            </span>
+                            <p class="text-xs text-gray-300 ">
+                                TechSaar developed an amazing notes-sharing platform for our EdTech company. Their innovative design and user-friendly interface have transformed the way students access and share educational materials. ~GuideMap.in - Dehradun
+                            </p>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-right" data-aos-delay="100" class="w-full h-auto grid grid-cols-3 items-center gap-2 justify-between mx-auto border p-2">
+                        <div class="w-full h-full bg-gray-50 flex items-center justify-center p-2">
+                            <img draggable="false" src="./assets/img/clients/ab.png" class="w-2/3" alt="">
+                        </div>
+                        <div class="flex flex-col gap-2 col-span-2">
+                            <h4 class="font-medium text-gray-200">
+                                Superior Customer Experience
+                            </h4>
+                            <span class="flex items-center">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                            </span>
+                            <p class="text-xs text-gray-300 ">
+                                TechSaar’s instant delivery app has transformed our business. The user-friendly interface and seamless functionality have greatly enhanced our customer experience. ~New Apna Bazar - South Delhi
+                            </p>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-right" data-aos-delay="100" class="w-full h-auto grid grid-cols-3 items-center gap-2 justify-between mx-auto border p-2">
+                        <div class="w-full h-full bg-gray-50 flex items-center justify-center p-2">
+                            <img draggable="false" src="./assets/img/clients/gm.png" class="w-full h-1/2" alt="">
+                        </div>
+                        <div class="flex flex-col gap-2 col-span-2">
+                            <h4 class="font-medium text-gray-200">
+                                Revolutionized Our Music Teaching
+                            </h4>
+                            <span class="flex items-center">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                            </span>
+                            <p class="text-xs text-gray-300 ">
+                                TechSaar developed an incredible music teaching portal for us. The platform’s intuitive design and seamless functionality have revolutionized the way we teach music. ~Rythmwalk - Dehradun
+                            </p>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-right" data-aos-delay="100" class="w-full h-auto grid grid-cols-3 items-center gap-2 justify-between mx-auto border p-2">
+                        <div class="w-full h-full bg-gray-50 flex items-center justify-center p-2">
+                            <img draggable="false" src="./assets/img/clients/gm.png" class="w-full h-1/2" alt="">
+                        </div>
+                        <div class="flex flex-col gap-2 col-span-2">
+                            <h4 class="font-medium text-gray-200">
+                                Exceptional E-commerce Development
+                            </h4>
+                            <span class="flex items-center">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                            </span>
+                            <p class="text-xs text-gray-300 ">
+                                The team at TechSaar is incredibly reliable and professional. Their digital marketing strategies have boosted our online presence ~D.S. Mart - Dehradun
+                            </p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
 
         <br>
         <br>
@@ -250,6 +454,7 @@
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js "></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js "></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js "></script>
 
 
