@@ -4,43 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
+    <title>Scroll Animation with lax.js</title>
+    <style>
+        body {
+            height: 200vh;
+        }
+    </style>
 
-
-
+    <script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
 </head>
 
-<body class="m-auto h-screen overflow-y-hidden">
-    <main class="h-full flex items-center justify-center mx-auto">
-        <div class="text-center">
-            <h1>Almost There !!</h1>
-            <h3>Your food is on the way</h3>
-            <p>asfsaf</p>
-        </div>
-    </main>
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+<body>
+    <!-- JS -->
     <script>
-        // use a script tag or an external JS file
-        document.addEventListener("DOMContentLoaded", (event) => {
-            gsap.defaults({
-                ease: "h1.in",
-                duration: 1,
-            });
+        window.onload = function() {
+            lax.init()
 
-            gsap.timeline({
-                defaults: {
-                    ease: "power2.in"
+            // Add a driver that we use to control our animations
+            lax.addDriver('scrollY', function() {
+                return window.scrollY
+            })
+
+            // Add animation bindings to elements
+            lax.addElements('.selector', {
+                scrollY: {
+                    translateX: [
+                        ["elInY", "elCenterY", "elOutY"],
+                        [0, 'screenWidth/2', 'screenWidth'],
+                    ]
                 }
             })
-        });
+        }
     </script>
+
+    <!-- HTML -->
+    <div class="selector">Hello</div>
 </body>
 
 </html>
