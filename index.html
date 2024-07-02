@@ -3,21 +3,25 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1, user-scalable=no">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="./assets/css/style.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-A1LL8B6yXeA62lHRgiFgXv4mW4omlB8kLFH5k/J8CkPPkoJ6oXV4wOaE4bQ+l7RrBNF4J9/vdj/rhQpe6fH9jw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- stats.js lib -->
-    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Techsaar: Empowering businesses with innovative technology solutions. Offering custom software development, tech support, website development, logo/graphic design, startup growth services, and outbound VOIP auto dialer solutions.">
+    <meta name="keywords" content="tech solutions, software development, tech support, website development, graphic design, startup growth, VOIP auto dialer">
+    <meta name="author" content="Techsaar">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Techsaar - Cutting-Edge Technology Solutions and Digital Services">
+    <meta property="og:description" content="Empowering businesses with innovative technology solutions. Offering custom software development, tech support, website development, logo/graphic design, startup growth services, and outbound VOIP auto dialer solutions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.techsaar.co.in">
+    <meta property="og:image" content="https://www.techsaar.co.in/assets/img/og-image.jpg">
+    <meta property="og:site_name" content="Techsaar">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Techsaar - Cutting-Edge Technology Solutions and Digital Services">
+    <meta name="twitter:description" content="Empowering businesses with innovative technology solutions. Offering custom software development, tech support, website development, logo/graphic design, startup growth services, and outbound VOIP auto dialer solutions.">
+    <meta name="twitter:image" content="https://www.techsaar.co.in/assets/img/twitter-image.jpg">
 
-
-
+    <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="./assets/img/favicon/favicon-96x96.png">
@@ -26,16 +30,48 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicon/apple-touch-icon.png">
     <link rel="manifest" href="./assets/img/favicon/site.webmanifest">
 
-
-
+    <!-- CSS and JS Libraries -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-A1LL8B6yXeA62lHRgiFgXv4mW4omlB8kLFH5k/J8CkPPkoJ6oXV4wOaE4bQ+l7RrBNF4J9/vdj/rhQpe6fH9jw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
     <script src="https://unpkg.com/rough-notation/lib/rough-notation.iife.js"></script>
-
-
 </head>
+
 
 <body class="antialiased hover:subpixel-antialiased overflow-x-hidden">
     <!-- Particles Container -->
     <div id="particles-js" data-aos="fade-down" data-aos-once="true" data-aos-delay="200"></div>
+
+    <button onclick="topFunction()" class="px-3 py-2 text-xl flex items-center justify-center" id="myBtn" title="Go to top">
+        <i class='bx bxs-chevron-up text-xl m-auto flex items-center justify-center'></i>
+    </button>
+
+    <script>
+        // Show the button when the page is scrolled down 20px from the top
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
 
     <!-- Main Content -->
     <header data-aos="fade-down" data-aos-once="true" data-aos-delay="300">
@@ -44,8 +80,8 @@
                 <img draggable="false" src="./assets/img/logo/full_logo_white.png" class="md:h-10 h-8" alt="Flowbite Logo" />
             </a>
             <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                <button type="button" class="md:block hidden text-white bg-none border-2 hover:bg-gray-50 transition duration-300 hover:text-gray-900 font-medium text-sm px-4 py-2 text-center">Get
-                    started!</button>
+                <a href="#contact-us" class="md:block hidden text-white bg-none border-2 hover:bg-gray-50 transition duration-300 hover:text-gray-900 font-medium text-sm px-4 py-2 text-center">Get
+                    in touch!</a>
                 <button data-collapse-toggle="navbar-cta" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-200 rounded-md md:hidden hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-cta"
                     aria-expanded="false">
                     <span class="sr-only">Open main menu</span>
@@ -61,21 +97,20 @@
                     <li><a href="#" class="block py-2 px-3 md:p-0 md:hover:bg-transparent hover:bg-gray-50 md:hover:text-white hover:text-black md:rounded-none rounded-md" aria-current="page">Home</a></li>
                     <li><a href="#about" class="block py-2 px-3 md:p-0 md:hover:bg-transparent hover:bg-gray-50 md:hover:text-white hover:text-black md:rounded-none rounded-md">About</a>
                     </li>
-                    <li><a href="#" class="block py-2 px-3 md:p-0 md:hover:bg-transparent hover:bg-gray-50 md:hover:text-white hover:text-black md:rounded-none rounded-md">Services</a>
+                    <li><a href="#services" class="block py-2 px-3 md:p-0 md:hover:bg-transparent hover:bg-gray-50 md:hover:text-white hover:text-black md:rounded-none rounded-md">Services</a>
                     </li>
-                    <li><a href="#" class="block py-2 px-3 md:p-0 md:hover:bg-transparent hover:bg-gray-50 md:hover:text-white hover:text-black md:rounded-none rounded-md">Products</a>
-                    </li>
-                    <li><a href="#" class="block py-2 px-3 md:p-0 md:hover:bg-transparent hover:bg-gray-50 md:hover:text-white hover:text-black md:rounded-none rounded-md">Contact</a>
-                    </li>
+                    <li><a href="#products" class="block py-2 px-3 md:p-0 md:hover:bg-transparent hover:bg-gray-50 md:hover:text-white hover:text-black md:rounded-none rounded-md">Products</a>
+                        <li><a href="#reviews" class="block py-2 px-3 md:p-0 md:hover:bg-transparent hover:bg-gray-50 md:hover:text-white hover:text-black md:rounded-none rounded-md">Reviews</a>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <main class="text-white flex flex-col gap-28 max-w-screen-xl mx-auto">
-        <section class="relative grid w-full h-auto lg:h-[38rem] place-items-center flex items-center justify-center md:px-0 px-2">
+    <main class="text-white flex flex-col gap-28 max-w-screen-xl md:mx-auto mx-8">
+        <!-- hero section  -->
+        <section id="hero" class="relative grid w-full h-auto lg:h-[38rem] place-items-center flex items-center justify-center md:px-0 px-2">
             <div class="flex flex-col items-center mx-auto text-center gap-12" data-aos="zoom-out" data-aos-once="true" data-aos-delay="550">
-                <h1 class="md:text-6xl text-3xl font-bold text-white uppercase mt-24">
+                <h1 class="md:text-6xl text-5xl font-bold text-white uppercase mt-24">
                     Your Saar to Tech
                     <span>Excellence!</span>
                     <svg class="nectar-scribble squiggle-underline-2" role="presentation" viewBox="-320 -70.8161 640.4 59.82" preserveAspectRatio="none">
@@ -85,7 +120,7 @@
                     </svg>
                 </h1>
 
-                <div class="grid grid-cols-4 md:grid-cols-4 items-center justify-between md:gap-4 w-full py-4 clients text-xs md:text-sm">
+                <div class="grid grid-cols-2 md:grid-cols-4 items-center justify-between gap-4 w-full py-4 clients text-xs md:text-sm">
                     <div class="flex flex-col items-center justify-center">
                         <div class="flex items-center justify-center gap-1 md:text-2xl text-lg font-medium">
                             <span class="count">70</span>+
@@ -133,7 +168,7 @@
         </section>
 
 
-
+        <!-- why choose us  -->
         <section class="w-full">
             <div class="flex flex-col gap-8 items-center justify-center mx-auto">
                 <h1 class="text-6xl text-gray-100 font-medium uppercase text-center" data-aos="fade-up" data-aos-delay="100">
@@ -142,24 +177,23 @@
                 <p class="max-w-screen-lg text-md text-gray-300 font-normal text-center" data-aos="fade-up" data-aos-delay="200">
                     Your trusted partner for innovative, reliable, and customer-focused technology solutions
                 </p>
-
                 <div class="text-gray-900 grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
-                    <div class="p-4 grid grid-cols-8 items-center justify-between" data-aos="fade-up" data-aos-delay="500" style="background-color: #ffffff;box-shadow: 10px 10px #404040;">
+                    <div class="p-4 grid md:grid-cols-8 grid-cols-4 items-center justify-between" data-aos="fade-up" data-aos-delay="300" style="background-color: #ffffff;box-shadow: 10px 10px #404040;">
                         <div class="rounded-full text-white w-16 h-16 text-4xl flex items-center justify-center" style="background-color: #121212;">
                             <i class='bx bxs-wallet'></i>
                         </div>
-                        <div class="col-span-7">
+                        <div class="md:col-span-7 col-span-3">
                             <h3 class="text-2xl font-semibold">
                                 Affordable Pricing
                             </h3>
                             <p class="font-medium text-md">We provide websites and tech support to all startups and working agencies and organizations at very affordable prices.</p>
                         </div>
                     </div>
-                    <div class="p-4 grid grid-cols-8 items-center justify-between" data-aos="fade-down" data-aos-delay="500" style="background-color: #ffffff;box-shadow: 10px 10px #404040;">
+                    <div class="p-4 grid md:grid-cols-8 grid-cols-4 items-center justify-between" data-aos="fade-down" data-aos-delay="300" style="background-color: #ffffff;box-shadow: 10px 10px #404040;">
                         <div class="rounded-full text-white w-16 h-16 text-4xl flex items-center justify-center" style="background-color: #121212;">
                             <i class='bx bxs-buildings'></i>
                         </div>
-                        <div class="col-span-7">
+                        <div class="md:col-span-7 col-span-3">
                             <h3 class="text-2xl font-semibold">
                                 Industrial Standards
                             </h3>
@@ -167,22 +201,22 @@
                             </p>
                         </div>
                     </div>
-                    <div class="p-4 grid grid-cols-8 items-center justify-between" data-aos="fade-up" data-aos-delay="500" style="background-color: #ffffff;box-shadow: 10px 10px #404040;">
+                    <div class="p-4 grid md:grid-cols-8 grid-cols-4 items-center justify-between" data-aos="fade-up" data-aos-delay="300" style="background-color: #ffffff;box-shadow: 10px 10px #404040;">
                         <div class="rounded-full text-white w-16 h-16 text-4xl flex items-center justify-center" style="background-color: #121212;">
                             <i class='bx bxl-netlify'></i>
                         </div>
-                        <div class="col-span-7">
+                        <div class="md:col-span-7 col-span-3">
                             <h3 class="text-2xl font-semibold">
                                 Agile Methodologies
                             </h3>
                             <p class="font-medium text-md">We implement Agile methodologies to ensure that our IT solutions and support services are delivered efficiently and effectively, meeting the dynamic needs of our clients with flexibility and rapid adaptation.</p>
                         </div>
                     </div>
-                    <div class="p-4 grid grid-cols-8 items-center justify-between" data-aos="fade-down" data-aos-delay="500" style="background-color: #ffffff;box-shadow: 10px 10px #404040;">
+                    <div class="p-4 grid md:grid-cols-8 grid-cols-4 items-center justify-between" data-aos="fade-down" data-aos-delay="300" style="background-color: #ffffff;box-shadow: 10px 10px #404040;">
                         <div class="rounded-full text-white w-16 h-16 text-4xl flex items-center justify-center" style="background-color: #121212;">
                             <i class='bx bx-support'></i>
                         </div>
-                        <div class="col-span-7">
+                        <div class="md:col-span-7 col-span-3">
                             <h3 class="text-2xl font-semibold">
                                 Round-the-Clock Support
                             </h3>
@@ -194,30 +228,30 @@
             </div>
         </section>
 
-
-        <section id="about" class="grid md:grid-cols-3 grid-cols-1 md:gap-4 gap-4">
-            <div class="col-span-2">
-                <h1 data-aos="fade-right" data-aos-delay="200" class="text-6xl text-gray-200 font-semibold">
+        <!-- about  -->
+        <section id="about" class="grid md:grid-cols-3 grid-cols-1 md:gap-4">
+            <div class="col-span-2 md:order-1 order-2 md:mt-0 mt-12">
+                <h1 data-aos="fade-right" data-aos-delay="200" class="md:text-6xl text-3xl text-gray-200 font-semibold">
                     Our Main Goal to Satisfied Local & Global Clients</h1>
                 <p data-aos="fade-right" data-aos-delay="300" class="text-md text-gray-300 font-normal">Your one-stop destination for cutting-edge technology solutions and digital services. Founded with a vision to empower businesses with innovative technology, we specialize in delivering top-notch software solutions and comprehensive digital
                     services tailored to your unique needs. With a team of seasoned professionals and tech enthusiasts, we are committed to driving growth and success for our clients in today's fast-paced digital world.
                     <br>
-                    <br> From software development and tech support to digital marketing and social media management, we offer a wide range of services to help businesses thrive and stay ahead of the curve. At techsaar, we believe in the power echnology
-                    to transform businesses and drive positive change.
+                    <br> From software development and tech support to and predictive outbound dialers, we offer a wide range of services to help businesses thrive and stay ahead of the curve. At techsaar, we believe in the power echnology to transform
+                    businesses and drive positive change.
                     <br>
                     <br> Our mission is to empower organizations of all sizes with the tools and expertise they need to achieve their goals and reach new heights of success in the digital age. Partner with techsaar today and let us help you unlock the
                     full potential of technology for your business!
                 </p>
             </div>
             <div class="w-full flex items-center justify-center" style="background-image: url(./assets/img/hero/graph.png); background-repeat: no-repeat; background-size: cover;" data-aos="fade-left" data-aos-delay="300">
-                <img draggable="false" src="./assets/img/logo/ICON_WHITE.png" class="w-1/2" alt="about_hero">
+                <img draggable="false" src="./assets/img/logo/ICON_WHITE.png" class="w-1/2 p-4 md:order-2 order-1" alt="about_hero">
             </div>
         </section>
 
-
-        <section data-aos="fade-up" data-aos-delay="50" class="bg-gray-50 flex items-center justify-center mx-12 p-4" style="box-shadow: 10px 10px #404040;">
-            <div class="grid grid-cols-5 items-center justify-between gap-24">
-                <h2 class="text-3xl font-semibold col-span-4 text-gray-800">
+        <!-- let's talk  -->
+        <section data-aos="fade-up" data-aos-delay="50" class="bg-gray-50 flex items-center justify-center md:mx-12 p-4" style="box-shadow: 10px 10px #404040;">
+            <div class="grid md:grid-cols-5 items-center justify-between md:gap-24">
+                <h2 class="md:text-3xl text-sm font-semibold md:col-span-4 text-gray-800">
                     Are you seeking to harness cutting-edge technologies to create innovative software products and applications?
                 </h2>
                 <button type="button" class="w-full text-white button-bg border-2 border-gray-100 transaction duration-300  font-medium text-sm px-4 py-2 text-center">
@@ -226,9 +260,10 @@
             </div>
         </section>
 
-        <section>
+        <!-- services  -->
+        <section id="services">
             <div class="flex flex-col gap-8 items-center justify-center mx-auto ">
-                <h1 class="text-6xl text-gray-100 font-medium uppercase text-center" data-aos="flip-up" data-aos-delay="50">
+                <h1 class="md:text-7xl text-5xl text-gray-100 font-medium uppercase text-center" data-aos="flip-up" data-aos-delay="50">
                     Get Ready to Grow Your Business
                 </h1>
                 <p class="max-w-screen-lg text-md text-gray-300 font-normal text-center" data-aos="flip-down" data-aos-delay="100">At techsaar, we are dedicated to providing a comprehensive suite of cutting-edge technology solutions and digital services designed to empower busies in today's fast-paced digital world. Our seasoned professionals and tech enthusiasts
@@ -236,7 +271,6 @@
                 </p>
 
                 <div class="grid md:grid-cols-2 grid-cols-1 md:gap-4 gap-4 py-12">
-
                     <div data-aos="fade-right" data-aos-delay="100" class="w-full card-bg  h-auto flex items-center gap-2 justify-between mx-auto border p-2">
                         <span class="w-6 h-full p-1 hero-bg"></span>
                         <div class="flex flex-col">
@@ -279,8 +313,6 @@
                             </p>
                         </div>
                     </div>
-
-
                     <div data-aos="fade-right" data-aos-delay="300" class="w-full card-bg  h-auto flex items-center gap-2 justify-between mx-auto border p-2">
                         <span class="w-6 h-full p-1 hero-bg"></span>
                         <div class="flex flex-col">
@@ -303,20 +335,17 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
-
         </section>
 
-
+        <!-- vision -->
         <section>
             <div class="grid md:grid-cols-2 grid-cols-1 md:gap-4 gap-4">
                 <div data-aos="fade-right" data-aos-delay="50">
                     <img src="./assets/img/hero/vision.png" draggable="false" style="filter: brightness(0.9);" alt="">
                 </div>
                 <div class="gap-8 flex flex-col">
-                    <h1 class="text-7xl text-gray-100 font-medium uppercase" data-aos="fade-left" data-aos-delay="50">
+                    <h1 class="md:text-7xl text-5xl text-gray-100 font-medium uppercase" data-aos="fade-left" data-aos-delay="50">
                         <span style="-webkit-text-fill-color: transparent;-webkit-text-stroke: 2px #c3c3c3;">
                             You Think
                         </span>
@@ -330,50 +359,46 @@
                 </div>
             </div>
         </section>
-
         <script type="module">
-            import { annotate } from 'https://unpkg.com/rough-notation?module'; let annotation; function annotateElement() { const n1 = document.querySelector('em'); if (annotation) { annotation.remove(); } annotation = annotate(n1, { type: 'circle', color: '#063660'
+            import { annotate } from 'https://unpkg.com/rough-notation?module'; let annotation; function annotateElement() { const n1 = document.querySelector('em'); if (annotation) { annotation.remove(); } annotation = annotate(n1, { type: 'circle', color: 'white'
             }); annotation.show(); } setInterval(annotateElement, 2000);
         </script>
 
-        <section class="w-full">
+        <!-- products  -->
+        <section class="w-full" id="products">
             <div class="gap-8 flex flex-col ">
-                <h1 class="text-7xl text-gray-100 font-medium uppercase" data-aos="flip-up" data-aos-delay="50">
+                <h1 class="md:text-7xl text-5xl text-gray-100 font-medium uppercase" data-aos="flip-up" data-aos-delay="50">
                     <span style="-webkit-text-fill-color: transparent;-webkit-text-stroke: 2px #c3c3c3;">Digital</span> solutions
                     <p class="text-xl font-normal" style="color: #878787;">
                         Take a look at our projects
+                    </p>
                 </h1>
-                </p>
-
-                <div class="grid grid-cols-3 gap-2 text-white">
+                <div class="grid md:grid-cols-3 md:gap-2 text-white">
                     <div class="overflow-hidden cursor-pointer p-2" data-aos="fade-right" data-aos-delay="100">
                         <a href="https://ezdial.techsaar.co.in/" target="_blank">
-                            <img src="./assets/img/projects/ezdial.png" class="zoom border border-gray-100 mb-2" alt="img_ezdial" draggable="false">
+                            <img src="./assets/img/projects/ezdial.png" style="width: 100%;height: 230px;" class="zoom border border-gray-100 mb-2" alt="img_ezdial" draggable="false">
                         </a>
                         <h2 class="text-lg font-semibold">EzDial: Efficient Outbound Auto Dialer</h2>
                         <p class="text-gray-300">Boost your sales and streamline your outbound calling campaigns with EzDial, the powerful and user-friendly auto dialer solution. Experience seamless integration, real-time analytics, and superior call management for optimal performance.
                         </p>
                     </div>
-
                     <div class="overflow-hidden cursor-pointer p-2" data-aos="fade-up" data-aos-delay="100">
                         <a href="https://newapnabazar.online/Home/" target="_blank">
-                            <img src="./assets/img/projects/grocery_delivery_app.png" class="zoom border border-gray-100 mb-2" alt="img_apnaBazar" draggable="false">
+                            <img src="./assets/img/projects/grocery_delivery_app.png" style="width: 100%;height: 230px;" class="zoom border border-gray-100 mb-2" alt="img_apnaBazar" draggable="false">
                         </a>
                         <h2 class="text-lg font-semibold">Instant Grocery Delivery App</h2>
                         <p class="text-gray-300">Introducing our Instant Grocery Delivery Web App, a revolutionary solution designed to transform the way you shop for essentials. Say goodbye to long queues, time-consuming trips to the store, and the hassle of juggling groceries.</p>
                     </div>
                     <div class="overflow-hidden cursor-pointer p-2" data-aos="fade-left" data-aos-delay="100">
                         <a href="https://guidemap.in/" target="_blank">
-                            <img src="./assets/img/projects/guidemap_app.png" class="zoom border border-gray-100 mb-2" alt="img_guidemap" draggable="false">
+                            <img src="./assets/img/projects/guidemap_app.png" style="width: 100%;height: 230px;" class="zoom border border-gray-100 mb-2" alt="img_guidemap" draggable="false">
                         </a>
                         <h2 class="text-lg font-semibold">GuideMap : Free Handwritten Notes </h2>
                         <p class="text-gray-300">GuideMap provides free, high-quality handwritten notes, offering clear and concise explanations to support your studies and enhance understanding.</p>
                     </div>
-
-
                     <div class="overflow-hidden cursor-pointer p-2" data-aos="fade-right" data-aos-delay="100">
-                        <a href="#" target="_blank">
-                            <img src="./assets/img/projects/kp_app.png" class="zoom border border-gray-100 mb-2" alt="img_devotionalWalk" draggable="false">
+                        <a hred="#">
+                            <img src="./assets/img/projects/kp_app.png" style="width: 100%;height: 230px;" class="zoom border border-gray-100 mb-2" alt="img_devotionalWalk" draggable="false">
                         </a>
                         <h2 class="text-lg font-semibold">Pahology Lab Web-Application</h2>
                         <p class="text-gray-300">
@@ -382,7 +407,7 @@
                     </div>
                     <div class="overflow-hidden cursor-pointer p-2" data-aos="fade-up" data-aos-delay="100">
                         <a href="https://www.theexamify.com/" target="_blank">
-                            <img src="./assets/img/projects/examify_app.png" class="zoom border border-gray-100 mb-2" alt="img_examify" draggable="false">
+                            <img src="./assets/img/projects/examify_app.png" style="width: 100%;height: 230px;" class="zoom border border-gray-100 mb-2" alt="img_examify" draggable="false">
                         </a>
                         <h2 class="text-lg font-semibold">TheExamify : The destination for Learners</h2>
                         <p class="text-gray-300">TheExamify is an e-learning platform offering comprehensive courses, study materials, and thesis assistance for competitive exams.
@@ -390,7 +415,7 @@
                     </div>
                     <div class="overflow-hidden cursor-pointer p-2" data-aos="fade-left" data-aos-delay="100">
                         <a href="https://www.devotionwalk.com/" target="_blank">
-                            <img src="./assets/img/projects/devotional_walk_app.png" class="zoom border border-gray-100 mb-2" alt="img_devotionalWalk" draggable="false">
+                            <img src="./assets/img/projects/devotional_walk_app.png" style="width: 100%;height: 230px;" class="zoom border border-gray-100 mb-2" alt="img_devotionalWalk" draggable="false">
                         </a>
                         <h2 class="text-lg font-semibold">Devotion Walk : Spiritual Path for 'self'</h2>
                         <p class="text-gray-300">
@@ -399,16 +424,15 @@
                     </div>
                     <div class="overflow-hidden cursor-pointer p-2" data-aos="fade-right" data-aos-delay="100">
                         <a href="https://www.rhythmwalk.net/" target="_blank">
-                            <img src="./assets/img/projects/rythmwalk_app.webp" class="zoom border border-gray-100 mb-2" alt="img_rythmwalk" draggable="false">
+                            <img src="./assets/img/projects/rythmwalk_app.webp" style="width: 100%;height: 230px;" class="zoom border border-gray-100 mb-2" alt="img_rythmwalk" draggable="false">
                         </a>
                         <h2 class="text-lg font-semibold">Rythmwalk : The Magic of Music</h2>
                         <p class="text-gray-300">Unleash your inner rockstar with our immersive online lessons, where melody meets mastery , explore our website and learn more about our programs and instructors.
                         </p>
                     </div>
-
                     <div class="overflow-hidden cursor-pointer p-2" data-aos="fade-up" data-aos-delay="100">
                         <a href="https://harmonoid.com/" target="_blank">
-                            <img src="./assets/img/projects/harmonoid_app.png" class="zoom border border-gray-100 mb-2" alt="img_devotionalWalk" draggable="false">
+                            <img src="./assets/img/projects/harmonoid_app.png" style="width: 100%;height: 230px;" class="zoom border border-gray-100 mb-2" alt="img_devotionalWalk" draggable="false">
                         </a>
                         <h2 class="text-lg font-semibold">Harmonoid : Plays & manages your music</h2>
                         <p class="text-gray-300">
@@ -417,7 +441,7 @@
                     </div>
                     <div class="overflow-hidden cursor-pointer p-2" data-aos="fade-left" data-aos-delay="100">
                         <a href="https://aurbataoo.com/" target="_blank">
-                            <img src="./assets/img/projects/aurbataoo_app.png" class="zoom border border-gray-100 mb-2" alt="img_devotionalWalk" draggable="false">
+                            <img src="./assets/img/projects/aurbataoo_app.png" style="width: 100%;height: 230px;" class="zoom border border-gray-100 mb-2" alt="img_devotionalWalk" draggable="false">
                         </a>
                         <h2 class="text-lg font-semibold">AurBataoo : E-commerce Website</h2>
                         <p class="text-gray-300">
@@ -426,19 +450,15 @@
                     </div>
                 </div>
             </div>
-
         </section>
 
-
-
-
-
-        <section>
+        <!-- reviews -->
+        <section id="reviews">
             <div class="flex flex-col gap-24 mx-auto">
-                <h1 class="text-7xl text-gray-100 font-medium uppercase text-end" data-aos="fade-left" data-aos-delay="50">
+                <h1 class="md:text-7xl text-5xl text-gray-100 font-medium uppercase text-end" data-aos="fade-left" data-aos-delay="50">
                     clients Say’s
                 </h1>
-                <div class="grid grid-cols-3 gap-4 text-gray-100 ">
+                <div class="grid md:grid-cols-3 grid-cols-1 gap-4 text-gray-100 ">
                     <div data-aos="fade-up" data-aos-delay="100 " class="w-full h-auto">
                         <div class="flex flex-col gap-2 col-span-2 ">
                             <h4 class="font-medium text-blue">
@@ -456,7 +476,6 @@
                             </p>
                         </div>
                     </div>
-
                     <div data-aos="fade-up" data-aos-delay="100 " class="w-full h-auto">
                         <div class="flex flex-col gap-2 col-span-2 ">
                             <h4 class="font-medium text-gray-100">
@@ -474,7 +493,6 @@
                             </p>
                         </div>
                     </div>
-
                     <div data-aos="fade-up" data-aos-delay="100 " class="w-full h-auto">
                         <div class="flex flex-col gap-2 col-span-2 ">
                             <h4 class="font-medium text-blue">
@@ -492,7 +510,6 @@
                             </p>
                         </div>
                     </div>
-
                     <div data-aos="fade-up" data-aos-delay="100 " class="w-full h-auto">
                         <div class="flex flex-col gap-2 col-span-2 ">
                             <h4 class="font-medium text-gray-100">
@@ -544,7 +561,6 @@
                             </p>
                         </div>
                     </div>
-
                     <div data-aos="fade-up" data-aos-delay="100 " class="w-full h-auto">
                         <div class="flex flex-col gap-2 col-span-2 ">
                             <h4 class="font-medium text-blue">
@@ -562,7 +578,6 @@
                             </p>
                         </div>
                     </div>
-
                     <div data-aos="fade-up" data-aos-delay="100 " class="w-full h-auto">
                         <div class="flex flex-col gap-2 col-span-2 ">
                             <h4 class="font-medium text-gray-100">
@@ -580,7 +595,6 @@
                             </p>
                         </div>
                     </div>
-
                     <div data-aos="fade-up" data-aos-delay="100 " class="w-full h-auto">
                         <div class="flex flex-col gap-2 col-span-2 ">
                             <h4 class="font-medium text-blue">
@@ -598,9 +612,8 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="grid grid-cols-5 gap-1 items-center justify-between">
-                    <a href="#" target="_blank" class=" flex items-center justify-center w-full h-full bg-red-50 overflow-hidden cursor-pointer">
+                    <a hred="#" class=" flex items-center justify-center w-full h-full bg-red-50 overflow-hidden cursor-pointer">
                         <img draggable="false" src="./assets/img/clients/aaa.png" class="w-full zoom" alt="">
                     </a>
                     <a href="https://newapnabazar.online/Home/" target="_blank" class=" flex items-center justify-center w-full h-full bg-gray-200 overflow-hidden cursor-pointer">
@@ -612,16 +625,16 @@
                     <a href="https://www.devotionwalk.com/" target="_blank" class=" flex items-center justify-center w-full h-full bg-white overflow-hidden cursor-pointer">
                         <img draggable="false" src="./assets/img/clients/devotional_walk.jpg" class="w-full zoom" alt="">
                     </a>
-                    <a href="#" target="_blank" class=" flex items-center justify-center w-full h-full bg-yellow-100 overflow-hidden cursor-pointer">
+                    <a hred="#" class=" flex items-center justify-center w-full h-full bg-yellow-100 overflow-hidden cursor-pointer">
                         <img draggable="false" src="./assets/img/clients/ds.png" class="w-full zoom" alt="">
                     </a>
-                    <a href="#" target="_blank" class="flex items-center justify-center w-full h-full bg-amber-100 overflow-hidden cursor-pointer">
+                    <a hred="#" class="flex items-center justify-center w-full h-full bg-amber-100 overflow-hidden cursor-pointer">
                         <img draggable="false" src="./assets/img/clients/em.png" class="w-full p-4 zoom" alt="">
                     </a>
                     <a href="https://www.guidemap.in/" target="_blank" class=" flex items-center justify-center w-full h-full bg-white overflow-hidden cursor-pointer">
                         <img draggable="false" src="./assets/img/clients/gm.png" class="w-full zoom" alt="">
                     </a>
-                    <a href="#" target="_blank" class=" flex items-center justify-center w-full h-full bg-pink-100 overflow-hidden cursor-pointer">
+                    <a hred="#" class=" flex items-center justify-center w-full h-full bg-pink-100 overflow-hidden cursor-pointer">
                         <img draggable="false" src="./assets/img/clients/kp.png" class="w-full zoom" alt="">
                     </a>
                     <a href="https://www.rhythmwalk.net/" target="_blank" class=" flex items-center justify-center w-full h-full bg-white overflow-hidden cursor-pointer">
@@ -631,35 +644,188 @@
                         <img draggable="false" src="./assets/img/clients/Theexamify.jpg" class="w-full zoom" alt="">
                     </a>
                 </div>
-
         </section>
 
 
         <!-- Connect With Us-->
-        <section>
-            <div class="flex flex-col gap-8 mx-auto  ">
-                <h1 class="text-6xl text-gray-100 font-medium uppercase text-end" data-aos="flip-up " data-aos-delay="50 ">
-                    Connect With Us
+        <section id="contact-us">
+            <div class="flex flex-col gap-24 mx-auto  ">
+                <h1 class="md:text-7xl text-5xl text-gray-100 font-medium uppercase text-end" data-aos="flip-up" data-aos-delay="100">
+                    <span style="-webkit-text-fill-color: transparent;-webkit-text-stroke: 2px #c3c3c3;">Connect</span> With Us
                 </h1>
+                <section class="grid grid-cols-1 md:gap-12 md:grid-cols-3">
+                    <div class="text-gray-900 flex flex-col md:mb-0 mb-12 items-center gap-8 w-full">
+                        <div class="p-4 flex gap-2 items-center justify-between w-full" data-aos="fade-up" data-aos-delay="100" style="background-color: #ffffff;box-shadow: 10px 10px #404040;">
+                            <div class="rounded-full text-white p-4 text-4xl flex items-center justify-center" style="background-color: #121212;">
+                                <i class='bx bx-map-alt'></i>
+                            </div>
+                            <div class="col-span-4">
+                                <h3 class="text-2xl font-semibold">
+                                    Locate us
+                                </h3>
+                                <p class="font-medium text-md">Techsaar, Sahastradhara Road, Dehradun - 248008, Uttarakhand, India</p>
+                            </div>
+                        </div>
+                        <div class="p-4 flex gap-2 items-center w-full" data-aos="fade-up" data-aos-delay="100" style="background-color: #ffffff;box-shadow: 10px 10px #404040;">
+                            <div class="rounded-full text-white p-4 text-4xl flex items-center justify-center" style="background-color: #121212;">
+                                <i class='bx bxs-phone-call'></i>
+                            </div>
+                            <div class="col-span-4">
+                                <h3 class="text-2xl font-semibold">
+                                    Call us at
+                                </h3>
+                                <a href="tel:+917536001034" class="font-medium text-md">+91 75360 01034</a>
+                            </div>
+                        </div>
+                        <div class="p-4 flex gap-2 items-center justify-between w-full" data-aos="fade-up" data-aos-delay="100" style="background-color: #ffffff;box-shadow: 10px 10px #404040;">
+                            <div class="rounded-full text-white p-4 text-4xl flex items-center justify-center" style="background-color: #121212;">
+                                <i class='bx bxl-gmail'></i>
+                            </div>
+                            <div class="col-span-4">
+                                <h3 class="text-2xl font-semibold">
+                                    Email us at
+                                </h3>
+                                <a href="mailto:business@techsaar.co.in" class="font-medium text-md">business@techsaar.co.in</a>
+                                <a href="mailto:support@techsaar.co.in" class="font-medium text-md">support@techsaar.co.in</a>
+                                <a href="mailto:hr@techsaar.co.in" class="font-medium text-md">hr@techsaar.co.in</a>
 
-
-
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-2" data-aos="fade-up" data-aos-delay="100">
+                        <div id="alert-placeholder"></div>
+                        <form id="contactForm" class="space-y-8">
+                            <div>
+                                <label for="email" class="block mb-2 text-sm font-medium text-white">Your email</label>
+                                <input type="email" id="email" name="email" class="border border-gray-50 text-gray-300 text-sm w-full" style="background-color: #000000d0;" placeholder="kumarvansh@techsaar.co.in" required>
+                            </div>
+                            <div>
+                                <label for="subject" class="block mb-2 text-sm font-medium text-white">Subject</label>
+                                <input type="text" id="subject" name="subject" class="border border-gray-50 text-gray-300 text-sm w-full" style="background-color: #000000d0;" placeholder="Let us know how we can help you" required>
+                            </div>
+                            <div class="sm:col-span-2">
+                                <label for="message" class="block mb-2 text-sm font-medium text-white">Your
+                                    message</label>
+                                <textarea id="message" name="message" rows="6" class="p-2 border border-gray-50 text-gray-300 text-sm w-full" style="background-color: #000000d0;" placeholder="Leave a comment..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-none border-2 bg-gray-50 hover:bg-gray-200 transition duration-300 text-gray-900 font-medium text-sm px-4 py-2 text-center">
+                                <i class='bx bx-paper-plane'></i> Send message
+                            </button>
+                        </form>
+                    </div>
+                </section>
             </div>
         </section>
-
-
-
-
     </main>
 
+    <!-- footer -->
+    <footer class="bg-white mt-24" style="box-shadow:18px -15px 0px 3px #404040">
+        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+            <div class="md:flex md:justify-between">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="flex items-center  md:justify-start justify-center">
+                        <img src="./assets/img/logo/full_logo_black.png" class="h-12 me-3" alt="techsaar Logo" />
+                    </a>
+                </div>
+                <div class="flex items-center justify-center">
+                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
+                            <path fill-rule="evenodd"
+                                d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span class="sr-only">Facebook page</span>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
+                            <path
+                                d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z" />
+                        </svg>
+                        <span class="sr-only">Discord community</span>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 17">
+                            <path fill-rule="evenodd"
+                                d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span class="sr-only">Twitter page</span>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span class="sr-only">GitHub account</span>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span class="sr-only">Dribbble account</span>
+                    </a>
+                </div>
+            </div>
+            <hr class="my-4 border-gray-200" />
+            <div class="text-sm text-gray-700 text-center">© 2024 <a href="#" class="hover:underline">techsaar.co.in</a>. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js "></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js "></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="./assets/js/script.js "></script>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <!-- <audio id="bgMusic" loop autoplay>
+        <source src="./assets/music/bg_music.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
     <script>
-    </script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var bgMusic = document.getElementById('bgMusic');
+            var sectionId = 'hero'; // ID of the section where music should play
+            var volumeWhenInView = 0.4; // Adjust volume when section is in view
+            var volumeWhenNotInView = 0.1; // Adjust volume when section is not in view
+
+            // Function to check if an element is in viewport
+            function isElementInViewport(element) {
+                var rect = element.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+
+            // Function to toggle music volume based on section visibility
+            function toggleMusicVolume() {
+                var section = document.getElementById(sectionId);
+                var isInViewport = isElementInViewport(section);
+
+                if (isInViewport) {
+                    bgMusic.volume = volumeWhenInView;
+                } else {
+                    bgMusic.volume = volumeWhenNotInView;
+                }
+            }
+
+            // Event listener for scroll to toggle music volume
+            window.addEventListener('scroll', toggleMusicVolume);
+
+            // Initial check on page load
+            toggleMusicVolume();
+        });
+    </script> -->
+
 </body>
 
 </html>

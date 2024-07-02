@@ -1,129 +1,3 @@
-@font-face {
-    font-family: "Campton";
-    src: url("AnyConv.com__CamptonThinItalic.woff") format("woff");
-    font-weight: 100;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "Campton";
-    src: url("AnyConv.com__CamptonBlackItalic.woff") format("woff");
-    font-weight: 900;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "Campton";
-    src: url("AnyConv.com__CamptonBlack.woff") format("woff");
-    font-weight: 900;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Campton";
-    src: url("AnyConv.com__CamptonBold.woff") format("woff");
-    font-weight: 700;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Campton";
-    src: url("AnyConv.com__CamptonBoldItalic.woff") format("woff");
-    font-weight: 700;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "Campton";
-    src: url("AnyConv.com__CamptonBlack.woff") format("woff");
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Campton";
-    src: url("AnyConv.com__CamptonBookItalic.woff") format("woff");
-    font-weight: 400;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "Campton";
-    src: url("AnyConv.com__CamptonExtraBold.woff") format("woff");
-    font-weight: 800;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Campton";
-    src: url("AnyConv.com__CamptonExtraBoldItalic.woff") format("woff");
-    font-weight: 800;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "Campton";
-    src: url("AnyConv.com__CamptonExtraLight.woff") format("woff");
-    font-weight: 200;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Campton";
-    src: url("AnyConv.com__CamptonExtraLightItalic.woff") format("woff");
-    font-weight: 200;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "Campton";
-    src: url("AnyConv.com__CamptonLight.woff") format("woff");
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Campton";
-    src: url("AnyConv.com__CamptonLightItalic.woff") format("woff");
-    font-weight: 300;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "Campton";
-    src: url("AnyConv.com__CamptonMedium.woff") format("woff");
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Campton";
-    src: url("AnyConv.com__CamptonMediumItalic.woff") format("woff");
-    font-weight: 500;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "Campton";
-    src: url("AnyConv.com__CamptonSemiBoldItalic.woff") format("woff");
-    font-weight: 600;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "Campton";
-    src: url("AnyConv.com__CamptonThin.woff") format("woff");
-    font-weight: 100;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Campton";
-    src: url("AnyConv.com__CamptonSemiBold.woff") format("woff");
-    font-weight: 600;
-    font-style: normal;
-}
-
 body {
     font-family: "Campton", sans-serif;
     background-color: #121212;
@@ -339,4 +213,16 @@ body {
 .zoom:hover {
     transform: scale(1.05);
     /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    cursor: pointer;
+    background-color: #ffffff;
+    box-shadow: 5px 5px #676767;
+    border: 1px solid black;
 }

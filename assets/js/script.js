@@ -135,17 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // GSAP Parallax Effect
-    gsap.to("#particles-js", {
-        yPercent: 20,
-        ease: "none",
-        scrollTrigger: {
-            trigger: "#particles-js",
-            start: "top bottom",
-            end: "bottom top",
-            scrub: true
-        }
-    });
+
 
     // Change header style on scroll
     const nav = document.querySelector('nav');
@@ -179,4 +169,50 @@ document.addEventListener('DOMContentLoaded', () => {
 
         updateCount();
     });
+});
+
+$(document).ready(function() {
+    $('#contactForm').submit(function(event) {
+        event.preventDefault(); // Prevent the form from submitting the traditional way
+
+        // Collect form data
+        var formData = {
+            email: $('#email').val(),
+            subject: $('#subject').val(),
+            message: $('#message').val()
+        };
+
+        // Send form data via AJAX
+        $.ajax({
+            type: 'POST',
+            url: 'send_mail.php',
+            data: formData,
+            dataType: 'json',
+            encode: true,
+            success: function(response) {
+                showAlert(response.message, 'border border-green-400 text-green-700');
+                resetForm();
+            },
+            error: function(response) {
+                showAlert('Failed to send message.', 'bg-red-100 border border-red-400 text-red-700');
+            }
+        });
+    });
+
+    function showAlert(message, alertClasses) {
+        $('#alert-placeholder').html(`
+            <div class="p-4 mb-4 text-sm ${alertClasses}" role="alert">
+                ${message}
+            </div>
+        `);
+
+        // Remove alert after 5 seconds
+        setTimeout(function() {
+            $('#alert-placeholder').html('');
+        }, 5000);
+    }
+
+    function resetForm() {
+        $('#contactForm')[0].reset();
+    }
 });
