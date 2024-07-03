@@ -1,0 +1,186 @@
+body {
+    font-family: "Campton", sans-serif;
+    background-color: #000000;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+.clients img {
+    filter: grayscale(1);
+    transition: filter 0.3s ease;
+}
+
+.clients img:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+}
+
+.hero-bg {
+    background: linear-gradient( 45deg, #12121200, #12121200, #006ece7e, #12121200, #12121200);
+    background-size: 1000% 1000%;
+    -webkit-animation: heroBackground 23s ease infinite;
+    -moz-animation: heroBackground 23s ease infinite;
+    animation: heroBackground 23s ease infinite;
+}
+
+@-webkit-keyframes heroBackground {
+    0% {
+        background-position: 0% 56%;
+    }
+    50% {
+        background-position: 100% 45%;
+    }
+    100% {
+        background-position: 0% 56%;
+    }
+}
+
+@-moz-keyframes heroBackground {
+    0% {
+        background-position: 0% 56%;
+    }
+    50% {
+        background-position: 100% 45%;
+    }
+    100% {
+        background-position: 0% 56%;
+    }
+}
+
+@keyframes heroBackground {
+    0% {
+        background-position: 0% 56%;
+    }
+    50% {
+        background-position: 100% 45%;
+    }
+    100% {
+        background-position: 0% 56%;
+    }
+}
+
+.button-bg {
+    background: linear-gradient( 45deg, #121212, #121212, #a9a9a9, #121212, #121212);
+    background-size: 1000% 1000%;
+    -webkit-animation: buttonAnimate 23s ease infinite;
+    -moz-animation: buttonAnimate 23s ease infinite;
+    animation: buttonAnimate 23s ease infinite;
+}
+
+@-webkit-keyframes buttonAnimate {
+    0% {
+        background-position: 0% 56%;
+    }
+    50% {
+        background-position: 100% 45%;
+    }
+    100% {
+        background-position: 0% 56%;
+    }
+}
+
+@-moz-keyframes buttonAnimate {
+    0% {
+        background-position: 0% 56%;
+    }
+    50% {
+        background-position: 100% 45%;
+    }
+    100% {
+        background-position: 0% 56%;
+    }
+}
+
+@keyframes buttonAnimate {
+    0% {
+        background-position: 0% 56%;
+    }
+    50% {
+        background-position: 100% 45%;
+    }
+    100% {
+        background-position: 0% 56%;
+    }
+}
+
+.card-bg {
+    background: linear-gradient( 45deg, #121212, #121212, #a9a9a9a8, #121212, #121212);
+    background-size: 1000% 1000%;
+    -webkit-animation: cardAnimate 23s ease infinite;
+    -moz-animation: cardAnimate 23s ease infinite;
+    animation: cardAnimate 23s ease infinite;
+}
+
+@-webkit-keyframes cardAnimate {
+    0% {
+        background-position: 0% 56%;
+    }
+    50% {
+        background-position: 100% 45%;
+    }
+    100% {
+        background-position: 0% 56%;
+    }
+}
+
+@-moz-keyframes cardAnimate {
+    0% {
+        background-position: 0% 56%;
+    }
+    50% {
+        backgr ound-position: 100% 45%;
+    }
+    100% {
+        background-position: 0% 56%;
+    }
+}
+
+@keyframes cardAnimate {
+    0% {
+        background-position: 0% 56%;
+    }
+    50% {
+        background-position: 100% 45%;
+    }
+    100% {
+        background-position: 0% 56%;
+    }
+}
+
+.text-blue {
+    color: #068bff;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 150vh;
+}
+
+.count {
+    display: inline-block;
+}
+
+.zoom {
+    transition: transform .5s;
+    /* Animation */
+}
+
+.zoom:hover {
+    transform: scale(1.05);
+    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    cursor: pointer;
+    background-color: #ffffff;
+    box-shadow: 5px 5px #676767;
+    border: 1px solid black;
+}
