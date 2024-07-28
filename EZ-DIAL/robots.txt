@@ -1,0 +1,19 @@
+# robots.txt for https://www.ezdial.techsaar.co.in
+
+# Allow all web crawlers to access everything
+User-agent: *
+Disallow:
+
+# Sitemap URL
+Sitemap: https://www.ezdial.techsaar.co.in/sitemap.xml
+
+# Block specific bots if necessary
+User-agent: BadBot
+Disallow: /
+
+# Allow Googlebot and Bingbot to access everything
+User-agent: Googlebot
+Disallow:
+
+User-agent: Bingbot
+Disallow:
