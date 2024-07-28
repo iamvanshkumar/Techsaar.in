@@ -1093,11 +1093,37 @@
         </div>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js "></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js "></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js "></script>
-    <script src="../assets/js/script.js "></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js "></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('#contactForm').on('submit', function(e) {
+                e.preventDefault();
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'process_form.php',
+                    data: $(this).serialize(),
+                    dataType: 'json',
+                    success: function(response) {
+                        if (response.status === 'success') {
+                            alert('Request Submitted Successfully!');
+                        } else {
+                            alert('Form submission failed: ' + response.message);
+                        }
+                    },
+                    error: function() {
+                        alert('An error occurred while submitting the form.');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
