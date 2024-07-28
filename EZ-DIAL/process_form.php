@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $message = $_POST['message'];
 
     // Recipient email address
-    $to = 'vanshkumar.mail@gmail.com'; // Replace with your email address
+    $to = 'business@techsaar.co.in'; // Replace with your email address
 
     // Email subject
     $email_subject = "New Form Submission: $subject";
