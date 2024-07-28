@@ -121,6 +121,13 @@
                 transform: translateY(0);
             }
         }
+        
+        @media screen and (min-width:200px) and (max-width:900px) {
+            #about_img {
+                margin: 0 !important;
+                width: 100% !important;
+            }
+        }
     </style>
 
 </head>
@@ -200,7 +207,7 @@
                 </p>
                 <ul class="mb-10 flex flex-wrap items-center justify-center gap-5">
                     <li>
-                        <a href="#" target="_blank" class="inline-flex items-center justify-center rounded-md bg-white px-7 py-[14px] text-center text-black font-medium text-dark shadow-1 transition duration-300 ease-in-out hover:bg-gray-2 hover:text-body-color">
+                        <a href="./assets/download/EZDIAL_NEW.pdf" download="EZDIALv101 -Manual.pdf" class="inline-flex items-center justify-center rounded-md bg-white px-7 py-[14px] text-center text-black font-medium text-dark shadow-1 transition duration-300 ease-in-out hover:bg-gray-2 hover:text-body-color">
                             Download
                         </a>
                     </li>
@@ -227,7 +234,7 @@
 
     <!-- Hero Content end -->
     <main class="bg-white w-full" style="box-shadow: inset 0px 8px 8px 0px #676767;">
-        <div class="max-w-screen-xl m-auto flex flex-col gap-24 py-12">
+        <div class="max-w-screen-xl m-auto flex flex-col md:gap-24 gap-12 md:py-12 p-4">
             <section class="grid grid-cols-2 md:grid-cols-4 items-center justify-between gap-4 w-full py-4 clients text-sm">
                 <div class="flex flex-col items-center justify-center">
                     <div class="flex items-center justify-center gap-1 md:text-4xl text-lg font-semibold">
@@ -262,16 +269,16 @@
             </section>
 
             <section class="w-full relative">
-                <img draggable="false" data-aos="fade-up" data-aos-once="true" data-aos-delay="100" src="./assets/img/hero/hero_1.png" class="w-[75%] flex items-center mx-auto justify-center" alt="hero_image">
-                <img draggable="false" data-aos="zoom-in" data-aos-once="true" data-aos-delay="300" src="./assets/img/hero/call-center.png" class="random-image" alt="call-center">
-                <img draggable="false" data-aos="zoom-in" data-aos-once="true" data-aos-delay="200" src="./assets/img/hero/customer-service (1).png" class="random-image" alt="customer-service">
-                <img draggable="false" data-aos="zoom-in" data-aos-once="true" data-aos-delay="300" src="./assets/img/hero/data-center.png" class="random-image" alt="data-center">
-                <img draggable="false" data-aos="zoom-in" data-aos-once="true" data-aos-delay="200" src="./assets/img/hero/gsm.png" class="random-image" alt="gsm">
-                <img draggable="false" data-aos="zoom-in" data-aos-once="true" data-aos-delay="300" src="./assets/img/hero/office.png" class="random-image" alt="office">
-                <img draggable="false" data-aos="zoom-in" data-aos-once="true" data-aos-delay="200" src="./assets/img/hero/call.png" class="random-image" alt="office">
-                <img draggable="false" data-aos="zoom-in" data-aos-once="true" data-aos-delay="300" src="./assets/img/hero/music.png" class="random-image" alt="office">
-                <img draggable="false" data-aos="zoom-in" data-aos-once="true" data-aos-delay="200" src="./assets/img/hero/report.png" class="random-image" alt="office">
-                <img draggable="false" data-aos="zoom-in" data-aos-once="true" data-aos-delay="300" src="./assets/img/hero/handshake.png" class="random-image" alt="office">
+                <img draggable="false" data-aos="fade-up" data-aos-once="true" data-aos-delay="100" src="./assets/img/hero/hero_1.png" class="md:w-[75%] flex items-center mx-auto justify-center" alt="hero_image">
+                <img draggable="false" data-aos="zoom-in" data-aos-once="true" data-aos-delay="300" src="./assets/img/hero/call-center.png" class=" md:block hidden  random-image" alt="call-center">
+                <img draggable="false" data-aos="zoom-in" data-aos-once="true" data-aos-delay="200" src="./assets/img/hero/customer-service (1).png" class=" md:block hidden  random-image" alt="customer-service">
+                <img draggable="false" data-aos="zoom-in" data-aos-once="true" data-aos-delay="300" src="./assets/img/hero/data-center.png" class=" md:block hidden  random-image" alt="data-center">
+                <img draggable="false" data-aos="zoom-in" data-aos-once="true" data-aos-delay="200" src="./assets/img/hero/gsm.png" class=" md:block hidden  random-image" alt="gsm">
+                <img draggable="false" data-aos="zoom-in" data-aos-once="true" data-aos-delay="300" src="./assets/img/hero/office.png" class=" md:block hidden  random-image" alt="office">
+                <img draggable="false" data-aos="zoom-in" data-aos-once="true" data-aos-delay="200" src="./assets/img/hero/call.png" class=" md:block hidden  random-image" alt="office">
+                <img draggable="false" data-aos="zoom-in" data-aos-once="true" data-aos-delay="300" src="./assets/img/hero/music.png" class=" md:block hidden  random-image" alt="office">
+                <img draggable="false" data-aos="zoom-in" data-aos-once="true" data-aos-delay="200" src="./assets/img/hero/report.png" class=" md:block hidden  random-image" alt="office">
+                <img draggable="false" data-aos="zoom-in" data-aos-once="true" data-aos-delay="300" src="./assets/img/hero/handshake.png" class="md:block hidden  random-image" alt="office">
             </section>
 
             <section id="about">
@@ -282,7 +289,7 @@
                 </div>
 
                 <div class="flex md:flex-row w-full flex-col gap-4">
-                    <img draggable="false" src="./assets/img/hero/hero_about.png" alt="hero_about" style="margin: -90px 0px 0px -120px;width: 60%;">
+                    <img id="about_img" draggable="false" src="./assets/img/hero/hero_about.png" alt="hero_about" style="margin: -90px 0px 0px -120px;width: 60%;">
                     <p class="text-base text-body-color ">
                         EZDial is a cutting-edge call center solution meticulously designed to meet the diverse and evolving needs of modern businesses. Our mission is to provide comprehensive, innovative, and state-of-the-art call center technologies that drive unparalleled
                         efficiency and significantly enhance customer satisfaction. At EZDial, we are committed to delivering high-quality solutions that are not only flexible and scalable but also tailored to cater to businesses of all sizes, from startups
@@ -295,6 +302,7 @@
 
                 </div>
             </section>
+
             <section id="features">
                 <div class="mx-auto mb-12 max-w-[642px] text-center lg:mb-[70px]">
                     <h2 class="mb-3 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]">
@@ -304,7 +312,7 @@
                         There are many features that set EZDIAL apart from other dialers, but some of the more helpful ones are.
                     </p>
                 </div>
-                <div class="w-full grid grid-cols-4 gap-4">
+                <div class="w-full grid md:grid-cols-4 gap-4">
                     <div class="shadow-md hover:shadow-sm transition duration-300 bg-blue-50 rounded-md border border-blue-100 p-4 flex flex-col items-center text-center gap-2">
                         <div class="bg-blue-400 p-2 rounded-full">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12" style="fill: #ffffff;" viewBox="0 0 640 512">
@@ -450,14 +458,14 @@
             </section>
 
             <section>
-                <div class="flex flex-row gap-4 justify-between mx-auto w-full">
+                <div class="flex md:flex-row flex-col gap-4 justify-between mx-auto w-full">
                     <div class="mt-[70px] flex flex-col gap-8">
                         <span>
                             <h2
                                 class="mb-3 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]">
                                 What EZDIAL Offers ?
                             </h2>
-                            <p class="text-base text-body-color">
+                            <p class="text-base text-body-color md:text-start text-center">
                                 EZDIAL offers essential values that can transform your organizations.
                             </p>
                         </span>
@@ -498,7 +506,7 @@
                             </p>
                         </span>
 
-                        <span class="grid grid-cols-3 gap-4">
+                        <span class="grid grid-cols-3 gap-4 text-center">
                             <span
                                 class="flex flex-col items-center justify-between bg-gray-100 p-2 rounded-md border border-gray-200">
                                 <span>Get</span>
@@ -517,7 +525,7 @@
                         </span>
                         </span>
                     </div>
-                    <img src="./assets/img/hero/hero_2.svg" width="70%" style="margin-right: -90px;" alt="hero_2">
+                    <img src="./assets/img/hero/hero_2.svg" class="md:block hidden" width="70%" style="margin-right: -90px;" alt="hero_2">
                 </div>
 
 
@@ -529,9 +537,9 @@
                         </h2>
                     </span>
                 </div>
-                <div class="pt-24 flex flex-row justify-center w-full mx-auto">
+                <div class="md:pt-24 md:gap-0 gap-4 flex md:flex-row flex-col justify-center w-full mx-auto">
                     <!-- Basic Card -->
-                    <div class="w-96 p-8 bg-white rounded-md pr-16 shadow-lg border border-gray-200">
+                    <div class="md:w-96 md:p-8 p-4 bg-white rounded-md md:pr-16 shadow-lg border border-gray-200">
                         <h1 class="text-black font-semibold text-2xl uppercase text-center ">Basic Plan
                             <p class="text-xs text-center font-normal text-blue-500">Monthly</p>
                         </h1>
@@ -584,13 +592,13 @@
                             </p>
                             <p class="py-2 text-center">Note: Additional add-ons other than users are not available for this plan.
                             </p>
-                            <a href="#" target="_blank" class="flex w-full justify-center gap-1 rounded-md bg-black px-6 py-[14px] font-medium text-white transition duration-300 ease-in-out hover:bg-black/[0.70] hover:text-white">
+                            <a href="https://forms.gle/KWFvjX1xatMzsodT6" target="_blank" class="flex w-full justify-center gap-1 rounded-md bg-black px-6 py-[14px] font-medium text-white transition duration-300 ease-in-out hover:bg-black/[0.70] hover:text-white">
                                 Choose Plan
                             </a>
                         </div>
                     </div>
                     <!-- StartUp Card -->
-                    <div class="w-96 p-8 hero-bg bg-black rounded-md text-white shadow-xl transform scale-105">
+                    <div class="md:w-96 md:p-8 p-4 hero-bg bg-black rounded-md text-white shadow-xl transform md:scale-105">
                         <h1 class="text-white font-semibold text-2xl uppercase text-center ">Starter Plan
                             <p class="text-xs text-center font-normal text-blue-500">Monthly</p>
                         </h1>
@@ -643,7 +651,7 @@
                             </p>
                             <p class="py-2 text-center">Note: Additional add-ons like agent users, supervisor users and more are available for this plan.
                             </p>
-                            <a href="#" target="_blank" class="flex w-full justify-center gap-1 rounded-md bg-white px-6 py-[14px] font-medium text-black transition duration-300 ease-in-out hover:bg-white/[0.20] hover:text-white">
+                            <a href="https://forms.gle/QZCR77Fg6cipHvTK8" target="_blank" class="flex w-full justify-center gap-1 rounded-md bg-white px-6 py-[14px] font-medium text-black transition duration-300 ease-in-out hover:bg-white/[0.20] hover:text-white">
                                 Choose Plan
                             </a>
                         </div>
@@ -652,7 +660,7 @@
                         </div>
                     </div>
                     <!-- Enterprise Card -->
-                    <div class="pl-16 w-96 p-8 bg-white rounded-md shadow-lg border border-gray-200">
+                    <div class="md:pl-16 md:w-96 md:p-8 p-4 bg-white rounded-md shadow-lg border border-gray-200">
                         <h1 class="text-black font-semibold text-2xl uppercase text-center ">Enterprise Plan
                             <p class="text-xs text-center font-normal text-blue-500">Monthly</p>
                         </h1>
@@ -703,9 +711,9 @@
                             <p class="flex items-center gap-1">
                                 <i class='bx bx-check-circle text-green-400 text-xl'></i>Agent Campaigns Script Setup
                             </p>
-                            <p class="py-2 ">Note: Additional add-ons like agent users, supervisor users and more are available for this plan.
+                            <p class="py-2 text-center">Note: Additional add-ons like agent users, supervisor users and more are available for this plan.
                             </p>
-                            <a href="#" target="_blank" class="flex w-full justify-center gap-1 rounded-md bg-black px-6 py-[14px] font-medium text-white transition duration-300 ease-in-out hover:bg-black/[0.70] hover:text-white">
+                            <a href="https://forms.gle/QFaHHcd272pFdHvC8" target="_blank" class="flex w-full justify-center gap-1 rounded-md bg-black px-6 py-[14px] font-medium text-white transition duration-300 ease-in-out hover:bg-black/[0.70] hover:text-white">
                                 Choose Plan
                             </a>
                         </div>
@@ -779,7 +787,7 @@
                                 <i class='bx bxs-star-half'></i>
                             </span>
                             <p class="text-xs text-gray-800 ">
-                                TechSaar’s customer service is outstanding. They are always available to troubleshoot issues and provide timely support. ~AAA-Manegement - New Delhi
+                                EZDIAL has drastically improved our sales team's productivity. The predictive dialing feature connects us to more leads faster, and the intelligent routing has increased our conversion rates. It's a game-changer for our sales strategy!
                             </p>
                         </div>
                     </div>
@@ -796,7 +804,7 @@
                                 <i class='bx bxs-star'></i>
                             </span>
                             <p class="text-xs text-gray-800 ">
-                                TechSaar has been a game-changer for our pathology lab. Their innovative software solutions and exceptional tech support have significantly improved our operational efficiency and accuracy. ~Kumar Pathology Clinic - Roorkee
+                                With EZDIAL, our customer service agents can handle more calls efficiently. The seamless integration and user-friendly interface have made a significant impact on our service quality. Our customer satisfaction scores have never been higher!
                             </p>
                         </div>
                     </div>
@@ -813,14 +821,14 @@
                                 <i class='bx bxs-star'></i>
                             </span>
                             <p class="text-xs text-gray-800 ">
-                                The team at TechSaar is incredibly reliable and professional. Their digital marketing strategies have boosted our online presence ~D.S. Mart - Dehradun
+                                EZDIAL has been a boon for our collection efforts. The efficiency of the predictive dialer ensures we reach more debtors in less time, significantly improving our recovery rates. Highly recommended for any collection agency!
                             </p>
                         </div>
                     </div>
                     <div data-aos="fade-up" data-aos-delay="100 " class="w-full h-auto">
                         <div class="flex flex-col gap-2 col-span-2 ">
                             <h4 class="font-medium text-black">
-                                Exceptional E-commerce Development
+                                Exceptional Telemarketing Focus
                             </h4>
                             <span class="flex items-center ">
                                 <i class='bx bxs-star'></i>
@@ -830,7 +838,7 @@
                                 <i class='bx bxs-star'></i>
                             </span>
                             <p class="text-xs text-gray-800 ">
-                                TechSaar built an outstanding e-commerce store for our clothing brand. Their expertise in web development and design has provided us with a platform that is both visually appealing and highly functional ~AurBataoo.com - Delhi
+                                EZDIAL has revolutionized our telemarketing campaigns. The predictive dialer minimizes downtime and maximizes talk time, resulting in more successful calls and better lead conversion rates. We couldn't be happier with the results!
                             </p>
                         </div>
                     </div>
@@ -847,14 +855,14 @@
                                 <i class='bx bxs-star'></i>
                             </span>
                             <p class="text-xs text-gray-800 ">
-                                The TechSaar team is highly professional and responsive. They have been instrumental in driving traffic to our e-commerce site through targeted digital marketing efforts. ~E-Mart99.in - Dehradun
+                                Using EZDIAL, our B2B sales team has seen a marked increase in productivity. The ability to automatically dial and route calls has streamlined our process, allowing us to focus on closing deals rather than dialing numbers.
                             </p>
                         </div>
                     </div>
                     <div data-aos="fade-up" data-aos-delay="100 " class="w-full h-auto">
                         <div class="flex flex-col gap-2 col-span-2 ">
                             <h4 class="font-medium text-black">
-                                Exceptional EdTech Solutions
+                                Exceptional Call-Center Solutions
                             </h4>
                             <span class="flex items-center ">
                                 <i class='bx bxs-star'></i>
@@ -864,7 +872,7 @@
                                 <i class='bx bxs-star'></i>
                             </span>
                             <p class="text-xs text-gray-800 ">
-                                TechSaar developed an amazing notes-sharing platform for our EdTech company. Their innovative design and user-friendly interface have transformed the way students access and share educational materials. ~GuideMap.in - Dehradun
+                                EZDIAL has transformed our debt collection process. The predictive dialing system allows our agents to contact more debtors efficiently, leading to a higher recovery rate and improved overall performance.
                             </p>
                         </div>
                     </div>
@@ -881,14 +889,14 @@
                                 <i class='bx bxs-star'></i>
                             </span>
                             <p class="text-xs text-gray-800 ">
-                                TechSaar’s instant delivery app has transformed our business. The user-friendly interface and seamless functionality have greatly enhanced our customer experience. ~New Apna Bazar - South Delhi
+                                EZDIAL has taken our lead generation to the next level. The software's predictive dialing capabilities have allowed us to reach more prospects in less time, resulting in a significant boost in qualified leads."
                             </p>
                         </div>
                     </div>
                     <div data-aos="fade-up" data-aos-delay="100 " class="w-full h-auto">
                         <div class="flex flex-col gap-2 col-span-2 ">
                             <h4 class="font-medium text-black">
-                                Revolutionized Our Music Teaching
+                                Customer Retention Strategy
                             </h4>
                             <span class="flex items-center ">
                                 <i class='bx bxs-star'></i>
@@ -898,14 +906,14 @@
                                 <i class='bx bxs-star'></i>
                             </span>
                             <p class="text-xs text-gray-800 ">
-                                TechSaar developed an incredible music teaching portal for us. The platform’s intuitive design and seamless functionality have revolutionized the way we teach music. ~Rythmwalk - Dehradun
+                                EZDIAL has played a key role in our customer retention strategy. The efficient call handling and real-time analytics have enabled us to maintain high customer satisfaction and reduce churn rates.
                             </p>
                         </div>
                     </div>
                     <div data-aos="fade-up" data-aos-delay="100 " class="w-full h-auto">
                         <div class="flex flex-col gap-2 col-span-2 ">
                             <h4 class="font-medium text-blue">
-                                Modernized Our Testing Process
+                                A Game Changer
                             </h4>
                             <span class="flex items-center ">
                                 <i class='bx bxs-star'></i>
@@ -915,7 +923,8 @@
                                 <i class='bx bxs-star'></i>
                             </span>
                             <p class="text-xs text-gray-800 ">
-                                The platform’s intuitive design and robust features have revolutionized the way we conduct exams. It has made the process smoother and more efficient." ~TheExamify - Dehradun </p>
+                                Implementing EZDIAL in our tech support center has been a game-changer. The predictive dialer ensures our agents are constantly engaged, leading to faster issue resolution and improved customer satisfaction."
+                            </p>
                         </div>
                     </div>
                 </div>
