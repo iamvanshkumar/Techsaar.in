@@ -5,179 +5,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invoice #TSINV0235</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f8f9fa;
-        }
-        
-        .headbg {
-            background-image: url("invoice_banner.png");
-            height: 200px;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        
-        .invoice-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        .billTo-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        
-        .invoice-header h1 {
-            font-size: 24px;
-            margin: 0;
-        }
-        
-        .invoice-header div {
-            text-align: right;
-        }
-        
-        .invoice-details,
-        .terms {
-            margin-bottom: 20px;
-        }
-        
-        .invoice-details p,
-        .terms p {
-            margin: 5px 0;
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-        
-        table,
-        th,
-        td {
-            border: 1px solid #dee2e6;
-        }
-        
-        th,
-        td {
-            padding: 10px;
-            text-align: left;
-        }
-        
-        th {
-            background-color: #000000;
-            color: white;
-        }
-        
-        .logo {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            align-items: flex-end;
-        }
-        
-        .logo p {
-            text-align: end;
-        }
-        
-        .invoice {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            align-items: flex-end;
-        }
-        
-        .bold {
-            font-weight: 700;
-        }
-        
-        .blue {
-            color: rgba(0, 30, 255, 0.838);
-            font-size: 24px;
-        }
-    </style>
 </head>
 
-<body>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f8f9fa;">
+    <div style="max-width: 800px; margin: 0 auto; padding: 20px; background: #fff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+        <img src="https://ezdial.techsaar.co.in/Recharge/invoice_banner.png" style="height: 200px;" alt="">
 
-    <div class="invoice-container">
-        <img src="https://ezdial.techsaar.co.in/Recharge/invoice_banner.png" alt="">
-        <div class="billTo-header">
+        <div style="display: flex; align-items: center; margin-bottom: 20px; margin-top: 20px;">
             <div>
-                <h1 class="blue">Bill To</h1>
-                <span class="line"></span>
-                <h2>Guru ji Teleconnect</h2>
-                <p>1/1 Second Floor Above Vishal mega mart Tilak Nagar New Delhi 110018</p>
-                <p>Hr@gurujiteleconnect.com </p>
-                <p>9811543927, 9971403661</p>
-            </div>
-            <div class="logo">
-                <img src="ts_logo.png" width="300px">
-                <p>www.techsaar.co.in</p>
-                <p>Sahastradhara Road, Dehradun - 248008, Uttarakhand, India</p>
-                <p>kumarvansh@techsaar.co.in, business@techsaar.co.in
-                </p>
-                <p>7536001034</p>
-                <div class="invoice">
-                    <p> <span class="bold">Invoice No:</span>&nbsp;#TSINV0235</p>
-                    <p><span class="bold">Invoice Date: </span>&nbsp;01/08/2024</p>
-                    <p> <span class="bold">Due Date:</span>&nbsp;01/08/2024</p>
+                <h1 style="font-size: 24px; margin: 0; color: rgba(0, 0, 0, 0.838);">Bill To</h1>
+                <span style="display: block; margin: 10px 0; border-top: 1px solid #dee2e6;"></span>
+                <h2 style="font-size: 20px; margin: 0;">Guru ji Teleconnect</h2>
+                <p style="margin: 5px 0;">1/1 Second Floor Above Vishal mega mart Tilak Nagar New Delhi 110018</p>
+                <p style="margin: 5px 0;">Hr@gurujiteleconnect.com</p>
+                <div style="display: flex; flex-direction: column;">
+                    <p style="font-weight: 700; margin: 5px 0;"> <span style="font-weight: 700;">Invoice
+                            No:</span>&nbsp;#TSINV0235</p>
+                    <p style="font-weight: 700; margin: 5px 0;"><span style="font-weight: 700;">Invoice Date:
+                        </span>{date('l, F j, Y g:i:s A')}</p>
                 </div>
-
             </div>
-
-
+            <div style="display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-end;gap:4px;">
+                <img src="ts_logo.png" width="300px" alt="Techsaar Logo">
+                <p style="text-align: end; margin:0;">www.techsaar.co.in</p>
+                <p style="text-align: end; margin:0;">Sahastradhara Road, Dehradun - 248008, Uttarakhand, India</p>
+                <p style="text-align: end; margin:0;">business@techsaar.co.in, kumarvansh@techsaar.co.in</p>
+                <p style="text-align: end; margin:0;">7536001034</p>
+            </div>
         </div>
 
-
-        <table>
+        <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
             <thead>
                 <tr>
-                    <th>Description</th>
-                    <th>Total Users</th>
-                    <th>Price</th>
-                    <th>Amount</th>
+                    <th style="border: 1px solid #dee2e6; padding: 10px; text-align: left; background-color: #000000; color: white;">
+                        Description</th>
+                    <th style="border: 1px solid #dee2e6; padding: 10px; text-align: center; background-color: #000000; color: white;">Total Users</th>
+                    <th style="border: 1px solid #dee2e6; padding: 10px; text-align: center; background-color: #000000; color: white;">Price</th>
+                    <th style="border: 1px solid #dee2e6; padding: 10px; text-align: center; background-color: #000000; color: white;">Amount</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Ez Dial - Outbound Auto Dialler Users</td>
-                    <td>10</td>
-                    <td>300.00</td>
-                    <td>3000.00</td>
+                    <td style="border: 1px solid #dee2e6; padding: 10px; text-align: left;">Ez Dial - Outbound Auto Dialler Users</td>
+                    <td style="border: 1px solid #dee2e6; padding: 10px; text-align: left;">10</td>
+                    <td style="border: 1px solid #dee2e6; padding: 10px; text-align: left;">300.00</td>
+                    <td style="border: 1px solid #dee2e6; padding: 10px; text-align: left;">3000.00</td>
                 </tr>
                 <tr>
-                    <td colspan="3"><strong>SUBTOTAL</strong></td>
-                    <td>3000.00</td>
+                    <td colspan="3" style="border: 1px solid #dee2e6; padding: 10px; text-align: left;">
+                        <strong>SUBTOTAL</strong></td>
+                    <td style="border: 1px solid #dee2e6; padding: 10px; text-align: left;">3000.00</td>
                 </tr>
                 <tr>
-                    <td colspan="3"><strong>TAX RATE</strong></td>
-                    <td>0.00%</td>
+                    <td colspan="3" style="border: 1px solid #dee2e6; padding: 10px; text-align: left;"><strong>TAX
+                            RATE</strong></td>
+                    <td style="border: 1px solid #dee2e6; padding: 10px; text-align: left;">0.00%</td>
                 </tr>
                 <tr>
-                    <td colspan="3"><strong>TOTAL TAX</strong></td>
-                    <td>0.00</td>
+                    <td colspan="3" style="border: 1px solid #dee2e6; padding: 10px; text-align: left;"><strong>TOTAL
+                            TAX</strong></td>
+                    <td style="border: 1px solid #dee2e6; padding: 10px; text-align: left;">0.00</td>
                 </tr>
                 <tr>
-                    <td colspan="3"><strong>Balance Due</strong></td>
-                    <td>3000.00</td>
+                    <td colspan="3" style="border: 1px solid #dee2e6; padding: 10px; text-align: left;"><strong>Balance
+                            Due</strong></td>
+                    <td style="border: 1px solid #dee2e6; padding: 10px; text-align: left;">3000.00</td>
                 </tr>
             </tbody>
         </table>
 
-        <div class="terms">
-            <h2>Terms & Instructions</h2>
-            <p>1. Subscription Renewal: The EZ Dial subscription will automatically renew at the end of each billing cycle unless cancelled prior to the renewal date.</p>
-            <p>2. User Limit: The subscription grants access for up to 10 users. Additional users may require an upgrade in the subscription plan.</p>
-            <p>3. Billing Cycle: Invoices are generated on a monthly basis, with payment due within 7 days of invoice receipt.</p>
-            <p>4. Cancellation Policy: Cancellations must be requested at least 7 days before the next billing cycle.</p>
+        <div style="margin-bottom: 20px;">
+            <h2 style="font-size: 20px; margin: 0;">Terms & Instructions</h2>
+            <p style="margin: 5px 0;">1. Subscription Renewal: The EZ Dial subscription will automatically renew at the end of each billing cycle unless cancelled prior to the renewal date.</p>
+            <p style="margin: 5px 0;">2. User Limit: The subscription grants access for up to 10 users. Additional users may require an upgrade in the subscription plan.</p>
+            <p style="margin: 5px 0;">3. Billing Cycle: Invoices are generated on a monthly basis, with payment due within 7 days of invoice receipt.</p>
+            <p style="margin: 5px 0;">4. Cancellation Policy: Cancellations must be requested at least 7 days before the next billing cycle.</p>
         </div>
     </div>
 

@@ -800,39 +800,40 @@
                                 dataType: 'json',
                                 success: function(response) {
                                     if (response.status === 'success') {
-                                        $.ajax({
-                                            type: 'POST',
-                                            url: './sendEmail_2.php',
-                                            data: {
-                                                companyName: companyName,
-                                                email: email,
-                                                amount: billTotal,
-                                                usersCount: usersCount,
-                                                transactionID: transactionID,
-                                            },
-                                            dataType: 'json',
-                                            success: function(response) {
-                                                if (response.status === 'success') {
-                                                    $('#key').empty();
-                                                    $('#key').append(activationKey);
-                                                    $('body').addClass('h-screen');
-                                                    $('body').removeClass('overflow-x-hidden');
-                                                    $('body').addClass('overflow-hidden');
-                                                    $('.confetti').removeClass('hidden');
-                                                    let oneMinute = 60; // 1 minute = 60 seconds
-                                                    let display = document.querySelector('#timer');
-                                                    startTimer(oneMinute, display);
-                                                    setTimeout(() => {
-                                                        window.location.href = '../index.html';
-                                                    }, 60000);
-                                                } else {
-                                                    alert('Form submission failed: ' + response.message);
-                                                }
-                                            },
-                                            error: function() {
-                                                alert('An error occurred while submitting the form.');
-                                            }
-                                        });
+                                        // $.ajax({
+                                        //     type: 'POST',
+                                        //     url: './sendEmail_2.php',
+                                        //     data: {
+                                        //         companyName: companyName,
+                                        //         address: address,
+                                        //         email: email,
+                                        //         amount: billTotal,
+                                        //         usersCount: usersCount,
+                                        //         transactionID: transactionID,
+                                        //     },
+                                        //     dataType: 'json',
+                                        //     success: function(response) {
+                                        //         if (response.status === 'success') {
+                                        $('#key').empty();
+                                        $('#key').append(activationKey);
+                                        $('body').addClass('h-screen');
+                                        $('body').removeClass('overflow-x-hidden');
+                                        $('body').addClass('overflow-hidden');
+                                        $('.confetti').removeClass('hidden');
+                                        let oneMinute = 60; // 1 minute = 60 seconds
+                                        let display = document.querySelector('#timer');
+                                        startTimer(oneMinute, display);
+                                        setTimeout(() => {
+                                            window.location.href = '../index.html';
+                                        }, 60000);
+                                        //         } else {
+                                        //             alert('Form submission failed: ' + response.message);
+                                        //         }
+                                        //     },
+                                        //     error: function() {
+                                        //         alert('An error occurred while submitting the form.');
+                                        //     }
+                                        // });
                                     } else {
                                         alert('Form submission failed: ' + response.message);
                                     }

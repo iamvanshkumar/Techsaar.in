@@ -1,48 +1,108 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $companyName = $_POST['companyName'];
+    $address = $_POST['address'];
     $email = $_POST['email'];
     $amount = $_POST['amount'];
     $usersCount = $_POST['usersCount'];
     $transactionID = $_POST['transactionID'];
 
+    // Calculate 2% tax
+    $taxRate = 0.02;  // 2%
+    $taxAmount = number_format($amount * $taxRate, 2);  // Calculate tax
+    $totalAmount = number_format($amount + $taxAmount, 2);  // Total amount including tax
+
     $to = $email;
-    $subject = 'Payment ';
+    $subject = 'Payment Invoice';
     $cc = 'business@techsaar.co.in';
 
+    // Generate today's date
+    $invoiceDate = date('l, F j, Y g:i:s A');
+
     // Inline CSS
-    $message = "<html>
-    <body style='font-family: Arial, sans-serif; background-color: #f9f9f9; margin: 0; padding: 0;'>
-        <div style='display: flex;align-items: center; justify-content: center; padding: 3rem; height: 100%; height: 420px; margin: auto; background-color: #ffffff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);'>
-            <div>
-                <h1 style='text-align: center; font-size: 54px; margin: 0;'>THANK YOU!!</h1>
-                <h2 style='text-align: center; font-size: 24px; margin: 0;'>{$companyName}</h2>
-                <img src='https://ezdial.techsaar.co.in/assets/img/icons/confetti.gif' alt='icon' style='display: flex; justify-content: center; width: 50%; margin: auto'>
-                <h2 style='text-align: center; font-size: 24px; margin: 0;'>FOR CHOOSING EZDIAL </h2>
+    $message = "<!DOCTYPE html>
+    <html lang=\"en\">
+    
+    <head>
+        <meta charset=\"UTF-8\">
+        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+        <title>Invoice #TSINV0235</title>
+    </head>
+    
+    <body style=\"font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f8f9fa;\">
+        <div style=\"max-width: 800px; margin: 0 auto; padding: 20px; background: #fff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\">
+            <img src=\"https://ezdial.techsaar.co.in/Recharge/invoice_banner.png\" style=\"height: 200px;\" alt=\"\">
+    
+            <div style=\"display: flex; align-items: center; margin-bottom: 20px; margin-top: 20px;\">
+                <div>
+                    <h1 style=\"font-size: 24px; margin: 0; color: rgba(0, 0, 0, 0.838);\">Bill To</h1>
+                    <span style=\"display: block; margin: 10px 0; border-top: 1px solid #dee2e6;\"></span>
+                    <h2 style=\"font-size: 20px; margin: 0;\">$companyName</h2>
+                    <p style=\"margin: 5px 0;\">$address</p>
+                    <p style=\"margin: 5px 0;\">$email</p>
+                    <p style=\"font-weight: 700; margin: 5px 0;\"> <span style=\"font-weight: 700;\">Invoice No:</span>&nbsp;#$transactionID</p>
+                    <p style=\"font-weight: 700; margin: 5px 0;\"><span style=\"font-weight: 700;\">Invoice Date:</span>&nbsp;$invoiceDate</p>
+                </div>
+                <div style=\"gap: 4px;\">
+                    <img src=\"https://ezdial.techsaar.co.in/Recharge/ts_logo.png\" style=\"display:flex;justify-content:flex-end\" width=\"300px\" alt=\"Techsaar Logo\">
+                    <p style=\"text-align: end; margin: 0;\">www.techsaar.co.in</p>
+                    <p style=\"text-align: end; margin: 0;\">Sahastradhara Road, Dehradun - 248008, Uttarakhand, India</p>
+                    <p style=\"text-align: end; margin: 0;\">business@techsaar.co.in, kumarvansh@techsaar.co.in</p>
+                    <p style=\"text-align: end; margin: 0;\">7536001034</p>
+                </div>
             </div>
-            <div style='text-align: center;'>
-                <h3 style='color: #10b981; font-size: 38px; font-weight: 600; text-align: center; margin: 1rem 0;'>
-                    Payment Successfully Completed
-                </h3>
-                <h4 style='color: #374151; margin: 0.5rem 0;font-size:20px'>Here is your activation key</h4>
-                <p id='key' style='font-size: xx-large;font-weight:600;padding: 4px;text-align: center; border: 2px solid yellow;background: #ffe600;'>
-                    $activationKey</p>
-                <p style='padding-top: 1rem; font-size: 0.75rem; text-align: center; color: #9ca3af;'>Note: Your invoice will be sent to you via email within 24 hours. If you have any questions or require assistance, please do not hesitate to contact us at +91 7536001034.</p>
-                <a href='https://techsaar.co.in/' target='_blank' style='text-decoration: none; color: #000000;'>Team
-                    Techsaar.co.in</a>
+    
+            <table style=\"width: 100%; border-collapse: collapse; margin-bottom: 20px;\">
+                <thead>
+                    <tr>
+                        <th style=\"border: 1px solid #dee2e6; padding: 10px; text-align: left; background-color: #000000; color: white;\">Description</th>
+                        <th style=\"border: 1px solid #dee2e6; padding: 10px; text-align: center; background-color: #000000; color: white;\">Total Users</th>
+                        <th style=\"border: 1px solid #dee2e6; padding: 10px; text-align: center; background-color: #000000; color: white;\">Price</th>
+                        <th style=\"border: 1px solid #dee2e6; padding: 10px; text-align: center; background-color: #000000; color: white;\">Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style=\"border: 1px solid #dee2e6; padding: 10px; text-align: left;\">Ez Dial - Outbound Auto Dialler Users</td>
+                        <td style=\"border: 1px solid #dee2e6; padding: 10px; text-align: center;\">$usersCount</td>
+                        <td style=\"border: 1px solid #dee2e6; padding: 10px; text-align: center;\">300.00</td>
+                        <td style=\"border: 1px solid #dee2e6; padding: 10px; text-align: center;\">$amount</td>
+                    </tr>
+                    <tr>
+                        <td colspan=\"3\" style=\"border: 1px solid #dee2e6; padding: 10px; text-align: left;\"><strong>SUBTOTAL</strong></td>
+                        <td style=\"border: 1px solid #dee2e6; padding: 10px; text-align: center;\">$amount</td>
+                    </tr>
+                    <tr>
+                        <td colspan=\"3\" style=\"border: 1px solid #dee2e6; padding: 10px; text-align: left;\"><strong>TAX RATE</strong></td>
+                        <td style=\"border: 1px solid #dee2e6; padding: 10px; text-align: center;\">2.00%</td>
+                    </tr>
+                    <tr>
+                        <td colspan=\"3\" style=\"border: 1px solid #dee2e6; padding: 10px; text-align: left;\"><strong>TOTAL TAX</strong></td>
+                        <td style=\"border: 1px solid #dee2e6; padding: 10px; text-align: center;\">$taxAmount</td>
+                    </tr>
+                    <tr>
+                        <td colspan=\"3\" style=\"border: 1px solid #dee2e6; padding: 10px; text-align: left;\"><strong>Balance Due</strong></td>
+                        <td style=\"border: 1px solid #dee2e6; padding: 10px; text-align: center;\">$totalAmount</td>
+                    </tr>
+                </tbody>
+            </table>
+    
+            <div style=\"margin-bottom: 20px;\">
+                <h2 style=\"font-size: 20px; margin: 0;\">Terms & Instructions</h2>
+                <p style=\"margin: 5px 0;\">1. Subscription Renewal: The EZ Dial subscription will automatically renew at the end of each billing cycle unless cancelled prior to the renewal date.</p>
+                <p style=\"margin: 5px 0;\">2. User Limit: The subscription grants access for up to 10 users. Additional users may require an upgrade in the subscription plan.</p>
+                <p style=\"margin: 5px 0;\">3. Billing Cycle: Invoices are generated on a monthly basis, with payment due within 7 days of invoice receipt.</p>
+                <p style=\"margin: 5px 0;\">4. Cancellation Policy: Cancellations must be requested at least 7 days before the next billing cycle.</p>
             </div>
         </div>
     </body>
-    </html>
-    ";
+    
+    </html>";
 
     // To send HTML mail, the Content-type header must be set
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type: text/html; charset=UTF-8" . "\r\n";
     $headers .= "Cc: $cc" . "\r\n";  // Add CC header here
-
-
-    // Additional headers
     $headers .= 'From: no-reply@techsaar.co.in' . "\r\n";
 
     // Send the email
@@ -54,3 +114,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 } else {
     echo json_encode(['status' => 'error', 'message' => 'Invalid request']);
 }
+?>
