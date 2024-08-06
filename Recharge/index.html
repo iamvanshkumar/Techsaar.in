@@ -310,20 +310,20 @@
         <!-- Hero Content -->
         <section class="w-full flex items-center justify-center m-auto p-4">
 
-            <div class="grid grid-cols-5 mx-auto gap-4 w-full h-full" data-aos="fade-up" data-aos-once="true" data-aos-delay="100">
-                <div class="col-span-3 flex flex-col gap-4">
+            <div class="grid md:grid-cols-5 grid-cols-1 mx-auto md:gap-4  w-full h-full" data-aos="fade-up" data-aos-once="true" data-aos-delay="100">
+                <div class="md:col-span-3 flex flex-col gap-4 md:mb-0 mb-4">
                     <div class="rounded-md border border-gray-50 shadow-md p-4 bg-white">
                         <div class="text-center max-w-xl mx-auto my-2">
-                            <h1 class="text-4xl font-bold text-gray-900 uppercase">
+                            <h1 class="md:text-4xl text-xl font-bold text-gray-900 uppercase">
                                 Recharge Your Dialer Here
                             </h1>
                             <p class="text-md text-gray-700">Now you can independently recharge your dialer, eliminating dependency and wait times.
                             </p>
                         </div>
 
-                        <div class="grid grid-cols-2 gap-4 p-3">
+                        <div class="md:grid grid-cols-2 gap-4 p-3">
                             <!-- Basic Card -->
-                            <div class="border-r pr-3">
+                            <div class="md:border-r pr-3">
                                 <h1 class="text-black font-semibold text-xl uppercase text-center ">Basic Plan
                                     <p class="text-xs text-center font-normal text-blue-500">Monthly</p>
                                 </h1>
@@ -768,8 +768,10 @@
                 const companyName = document.getElementById('company').value.trim();
                 const address = document.getElementById('address').value.trim();
                 const email = document.getElementById('email').value.trim();
+                const usersCount = usersSelect.value; // Assuming you have a select element with ID `usersSelect`
+                const planType = planSelect.value; // Assuming you have a select element with ID `planSelect`
 
-                if (!companyName || !address || !email || !usersSelect.value || !planSelect.value) {
+                if (!companyName || !address || !email || !usersCount || !planType) {
                     showAlert('Please fill in all required fields.');
                     return;
                 }
@@ -777,35 +779,69 @@
                 const billTotal = parseFloat(billTotalElem.textContent.replace('₹', '').replace(',', ''));
 
                 const razorpayOptions = {
-                    key: 'rzp_test_h3SHdxttVW0pki', // Enter your Razorpay Key ID here
-                    amount: billTotal * 100, // Amount in the smallest currency unit (i.e., paise for INR)
+                    key: 'rzp_test_h3SHdxttVW0pki',
+                    amount: billTotal * 100,
                     currency: 'INR',
                     name: 'Techsaar.co.in',
                     description: 'Payment for subscription',
                     image: 'https://techsaar.co.in/assets/img/logo/ICON_WHITE.png',
                     handler: function(response) {
-                        if (response.razorpay_payment_id !== '') {
-                            const activation_Key = convertDateToBase64(futureDate);
-
-
-
-
-
-                            $('#key').empty();
-                            $('#key').append(activation_Key);
-                            $('body').addClass('h-screen');
-                            $('body').removeClass('overflow-x-hidden');
-                            $('body').addClass('overflow-hidden');
-                            $('.confetti').removeClass('hidden');
-                            let oneMinute = 60; // 1 minute = 60 seconds
-                            let display = document.querySelector('#timer');
-                            startTimer(oneMinute, display);
-                            setTimeout(() => {
-                                window.location.href = '../index.html';
-                            }, 60000);
-
+                        const transactionID = response.razorpay_payment_id;
+                        if (transactionID !== '') {
+                            const activationKey = convertDateToBase64(futureDate);
+                            $.ajax({
+                                type: 'POST',
+                                url: './sendEmail.php',
+                                data: {
+                                    companyName: companyName,
+                                    email: email,
+                                    activationKey: activationKey
+                                },
+                                dataType: 'json',
+                                success: function(response) {
+                                    if (response.status === 'success') {
+                                        $.ajax({
+                                            type: 'POST',
+                                            url: './sendEmail_2.php',
+                                            data: {
+                                                companyName: companyName,
+                                                email: email,
+                                                amount: billTotal,
+                                                usersCount: usersCount,
+                                                transactionID: transactionID,
+                                            },
+                                            dataType: 'json',
+                                            success: function(response) {
+                                                if (response.status === 'success') {
+                                                    $('#key').empty();
+                                                    $('#key').append(activationKey);
+                                                    $('body').addClass('h-screen');
+                                                    $('body').removeClass('overflow-x-hidden');
+                                                    $('body').addClass('overflow-hidden');
+                                                    $('.confetti').removeClass('hidden');
+                                                    let oneMinute = 60; // 1 minute = 60 seconds
+                                                    let display = document.querySelector('#timer');
+                                                    startTimer(oneMinute, display);
+                                                    setTimeout(() => {
+                                                        window.location.href = '../index.html';
+                                                    }, 60000);
+                                                } else {
+                                                    alert('Form submission failed: ' + response.message);
+                                                }
+                                            },
+                                            error: function() {
+                                                alert('An error occurred while submitting the form.');
+                                            }
+                                        });
+                                    } else {
+                                        alert('Form submission failed: ' + response.message);
+                                    }
+                                },
+                                error: function() {
+                                    alert('An error occurred while submitting the form.');
+                                }
+                            });
                         }
-                        // You can also handle payment confirmation and processing here
                     },
                     prefill: {
                         name: companyName,
