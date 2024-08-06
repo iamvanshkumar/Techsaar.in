@@ -42,12 +42,232 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-A1LL8B6yXeA62lHRgiFgXv4mW4omlB8kLFH5k/J8CkPPkoJ6oXV4wOaE4bQ+l7RrBNF4J9/vdj/rhQpe6fH9jw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
     <script src="https://unpkg.com/rough-notation/lib/rough-notation.iife.js"></script>
+
+    <!-- razorpay -->
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/razorpay/2.1.6/razorpay.min.js"></script>
+
+
+    <style>
+        .confetti {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            z-index: 90;
+            top: 0;
+            bottom: 0;
+            background: #00000096;
+        }
+        /* Add relevant styles */
+        
+        .hidden {
+            display: none;
+        }
+        
+        .opacity-100 {
+            opacity: 1;
+            transition: opacity 0.3s;
+        }
+        
+        .confetti-piece {
+            position: absolute;
+            width: 10px;
+            height: 40px;
+            background: #ffd300;
+            top: 0;
+            opacity: 0;
+        }
+        
+        .confetti-piece:nth-child(1) {
+            left: 7%;
+            -webkit-transform: rotate(-40deg);
+            -webkit-animation: makeItRain 1000ms infinite ease-out;
+            -webkit-animation-delay: 182ms;
+            -webkit-animation-duration: 1116ms;
+        }
+        
+        .confetti-piece:nth-child(2) {
+            left: 14%;
+            -webkit-transform: rotate(4deg);
+            -webkit-animation: makeItRain 1000ms infinite ease-out;
+            -webkit-animation-delay: 161ms;
+            -webkit-animation-duration: 1076ms;
+        }
+        
+        .confetti-piece:nth-child(3) {
+            left: 21%;
+            -webkit-transform: rotate(-51deg);
+            -webkit-animation: makeItRain 1000ms infinite ease-out;
+            -webkit-animation-delay: 481ms;
+            -webkit-animation-duration: 1103ms;
+        }
+        
+        .confetti-piece:nth-child(4) {
+            left: 28%;
+            -webkit-transform: rotate(61deg);
+            -webkit-animation: makeItRain 1000ms infinite ease-out;
+            -webkit-animation-delay: 334ms;
+            -webkit-animation-duration: 708ms;
+        }
+        
+        .confetti-piece:nth-child(5) {
+            left: 35%;
+            -webkit-transform: rotate(-52deg);
+            -webkit-animation: makeItRain 1000ms infinite ease-out;
+            -webkit-animation-delay: 302ms;
+            -webkit-animation-duration: 776ms;
+        }
+        
+        .confetti-piece:nth-child(6) {
+            left: 42%;
+            -webkit-transform: rotate(38deg);
+            -webkit-animation: makeItRain 1000ms infinite ease-out;
+            -webkit-animation-delay: 180ms;
+            -webkit-animation-duration: 1168ms;
+        }
+        
+        .confetti-piece:nth-child(7) {
+            left: 49%;
+            -webkit-transform: rotate(11deg);
+            -webkit-animation: makeItRain 1000ms infinite ease-out;
+            -webkit-animation-delay: 395ms;
+            -webkit-animation-duration: 1200ms;
+        }
+        
+        .confetti-piece:nth-child(8) {
+            left: 56%;
+            -webkit-transform: rotate(49deg);
+            -webkit-animation: makeItRain 1000ms infinite ease-out;
+            -webkit-animation-delay: 14ms;
+            -webkit-animation-duration: 887ms;
+        }
+        
+        .confetti-piece:nth-child(9) {
+            left: 63%;
+            -webkit-transform: rotate(-72deg);
+            -webkit-animation: makeItRain 1000ms infinite ease-out;
+            -webkit-animation-delay: 149ms;
+            -webkit-animation-duration: 805ms;
+        }
+        
+        .confetti-piece:nth-child(10) {
+            left: 70%;
+            -webkit-transform: rotate(10deg);
+            -webkit-animation: makeItRain 1000ms infinite ease-out;
+            -webkit-animation-delay: 351ms;
+            -webkit-animation-duration: 1059ms;
+        }
+        
+        .confetti-piece:nth-child(11) {
+            left: 77%;
+            -webkit-transform: rotate(4deg);
+            -webkit-animation: makeItRain 1000ms infinite ease-out;
+            -webkit-animation-delay: 307ms;
+            -webkit-animation-duration: 1132ms;
+        }
+        
+        .confetti-piece:nth-child(12) {
+            left: 84%;
+            -webkit-transform: rotate(42deg);
+            -webkit-animation: makeItRain 1000ms infinite ease-out;
+            -webkit-animation-delay: 464ms;
+            -webkit-animation-duration: 776ms;
+        }
+        
+        .confetti-piece:nth-child(13) {
+            left: 91%;
+            -webkit-transform: rotate(-72deg);
+            -webkit-animation: makeItRain 1000ms infinite ease-out;
+            -webkit-animation-delay: 429ms;
+            -webkit-animation-duration: 818ms;
+        }
+        
+        .confetti-piece:nth-child(odd) {
+            background: #7431e8;
+        }
+        
+        .confetti-piece:nth-child(even) {
+            z-index: 1;
+        }
+        
+        .confetti-piece:nth-child(4n) {
+            width: 5px;
+            height: 12px;
+            -webkit-animation-duration: 2000ms;
+        }
+        
+        .confetti-piece:nth-child(3n) {
+            width: 3px;
+            height: 10px;
+            -webkit-animation-duration: 2500ms;
+            -webkit-animation-delay: 1000ms;
+        }
+        
+        .confetti-piece:nth-child(4n-7) {
+            background: red;
+        }
+        
+        @-webkit-keyframes makeItRain {
+            from {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            to {
+                -webkit-transform: translateY(350px);
+            }
+        }
+    </style>
 </head>
 
 
 
 <body class="antialiased hover:subpixel-antialiased overflow-x-hidden hero-bg bg-black">
+
+    <div class="confetti hidden">
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+
+        <div class="flex flex-col items-center bg-white p-4 rounded-md shadow-xl border w-[540px]" style="z-index: 10000;">
+            <p class="text-gray-500 text-xs">Closing in <span class="text-blue-400" id="timer">01:00</span></p>
+            <h1 class="text-3xl font-semibold text-green-500">Payment Completed</h1>
+            <img class="w-[30%]" src="../assets/img/icons/confetti.gif" draggable="false" alt="icon">
+
+            <div class="text-center">
+                <h4 class="text-gray-700">Here is your activation key</h4>
+                <p class="text-sm">This key is valid from <span class="text-blue-500" id="today_date"></span> to
+                    <span class="text-blue-500" id="ending_date"></span>
+                </p>
+                <img class="w-[300px] h-[100px] mx-auto" src="../assets/img/icons/ticket.png" draggable="false" alt="">
+                <p id="key" class="mt-[-60px] font-semibold">sajkbasf_ahjsdf=</p>
+            </div>
+            <div class="mt-8">
+                <button id="copy-button" class="inline-flex items-center gap-1 justify-center rounded-md bg-black px-7 py-[7px] text-center text-white font-medium text-dark shadow-1 transition duration-300 ease-in-out hover:bg-gray-600">
+                    <i class='bx bx-copy-alt'></i> Copy
+                </button>
+            </div>
+            <p class="pt-4 text-xs text-center text-gray-600">Note: Your invoice will be sent to you via email within 24 hours. If you have any questions or require assistance, please do not hesitate to contact us at +91 7536001034.
+            </p>
+        </div>
+    </div>
+
+
 
     <button onclick="topFunction()" class="px-3 py-2 text-xl flex items-center justify-center rounded-full" id="myBtn" title="Go to top">
         <i class='bx bxs-chevron-up text-xl m-auto flex items-center justify-center'></i>
@@ -306,6 +526,12 @@
                                 </span>
                             </div>
                         </div>
+                        <div id="alert-container" class="fixed top-4 right-4 w-80 mx-auto hidden z-50">
+                            <div class="bg-red-500 text-white px-4 py-2 rounded-lg shadow-lg flex items-center justify-between">
+                                <span id="alert-message">Please fill in all required fields.</span>
+                                <button id="alert-close" class="text-white font-bold text-lg">&times;</button>
+                            </div>
+                        </div>
 
                         <button id="pay-button" class="inline-flex items-center gap-1 justify-center rounded-md bg-black px-7 py-[14px] text-center text-white font-medium text-dark shadow-1 transition duration-300 ease-in-out hover:bg-gray-600">
                             Pay <span id="pay-amount"></span>
@@ -324,16 +550,11 @@
                     <div class="flex flex-col gap-4 rounded-md border border-gray-50 shadow-md p-4 bg-white">
                         <p class="text-sm flex items-center gap-1"><i class='bx bx-list-ul'></i> Terms and Conditions
                         </p>
-
                         <ul class="text-xs text-gray-600">
                             <li>No Refund Policy: Once the payment is completed, it is non-refundable. Please ensure that you review all details carefully before proceeding with the payment.</li>
                             <li>Invoice Delivery: You will receive your invoice within 24 hours of completing the payment. Please check your email for the invoice, and ensure that the provided email address is correct.</li>
                         </ul>
-
                     </div>
-
-
-
                 </div>
             </div>
         </section>
@@ -377,33 +598,90 @@
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js "></script>
     <script>
         AOS.init();
-    </script>
-    <script>
-        $(document).ready(function() {
-            $('#contactForm').on('submit', function(e) {
-                e.preventDefault();
 
-                $.ajax({
-                    type: 'POST',
-                    url: 'process_form.php',
-                    data: $(this).serialize(),
-                    dataType: 'json',
-                    success: function(response) {
-                        if (response.status === 'success') {
-                            alert('Request Submitted Successfully!');
-                        } else {
-                            alert('Form submission failed: ' + response.message);
-                        }
-                    },
-                    error: function() {
-                        alert('An error occurred while submitting the form.');
-                    }
-                });
+        document.addEventListener('DOMContentLoaded', function() {
+            const copyButton = document.getElementById('copy-button');
+            const keyElement = document.getElementById('key');
+
+            copyButton.addEventListener('click', function() {
+                // Create a temporary input element to copy the text
+                const tempInput = document.createElement('input');
+                document.body.appendChild(tempInput);
+                tempInput.value = keyElement.textContent;
+                tempInput.select();
+                document.execCommand('copy');
+                document.body.removeChild(tempInput);
+
+                // Optional: Show a message or visual feedback
+                alert('Activation key copied to clipboard!');
             });
         });
 
 
+        function startTimer(duration, display) {
+            let timer = duration,
+                minutes, seconds;
+            setInterval(function() {
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
 
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    timer = 0;
+                }
+            }, 1000);
+        }
+
+
+
+        // Function to format a Date object as YYYY-MM-DD
+        // Format a Date object as 'YYYY-MM-DD'
+        function formatDate(date) {
+            return date.toISOString().split('T')[0];
+        }
+
+
+        // Convert date to a base64-encoded key
+        function dateToKey(dateStr) {
+            const dateObj = new Date(dateStr);
+            const timestamp = dateObj.getTime();
+            const buffer = new ArrayBuffer(8); // 8 bytes for 64-bit integer
+            const view = new DataView(buffer);
+            view.setBigUint64(0, BigInt(timestamp), true); // Little-endian
+            const base64Key = btoa(String.fromCharCode(...new Uint8Array(buffer)));
+            return base64Key;
+        }
+
+
+
+        // Get today's date
+        const today = new Date();
+
+        // Calculate the date 31 days from today
+        const futureDate = new Date(today);
+        futureDate.setDate(today.getDate() + 31);
+
+        // Format today's date and the future date
+        const formattedTodayDate = formatDate(today);
+        const formattedFutureDate = formatDate(futureDate);
+
+        // Display the dates
+        document.getElementById('today_date').textContent = formattedTodayDate;
+        document.getElementById('ending_date').textContent = formattedFutureDate;
+
+        // Convert the future date to base64-encoded string
+        function convertDateToBase64(date) {
+            const timestamp = date.getTime();
+            const buffer = new ArrayBuffer(8); // 8 bytes for 64-bit integer
+            const view = new DataView(buffer);
+            view.setBigUint64(0, BigInt(timestamp), true); // Little-endian
+            const base64Key = btoa(String.fromCharCode(...new Uint8Array(buffer)));
+            return base64Key;
+        }
 
 
 
@@ -417,6 +695,8 @@
             const billTotalElem = document.getElementById('bill-total');
             const payAmountElem = document.getElementById('pay-amount');
             const payButton = document.getElementById('pay-button');
+            const alertContainer = document.getElementById('alert-container');
+            const alertClose = document.getElementById('alert-close');
 
             const starterPlanPrice = 300;
             const basicPlanPrice = 250;
@@ -462,11 +742,37 @@
 
             usersSelect.addEventListener('change', updateBillDetails);
 
+            // Function to show the alert
+            function showAlert(message) {
+                const alertMessage = document.getElementById('alert-message');
+                alertMessage.textContent = message;
+                alertContainer.classList.remove('hidden');
+                topFunction();
+                setTimeout(() => {
+                    alertContainer.classList.add('opacity-100');
+                }, 100);
+            }
+
+            // Function to hide the alert
+            function hideAlert() {
+                alertContainer.classList.remove('opacity-100');
+                setTimeout(() => {
+                    alertContainer.classList.add('hidden');
+                }, 300);
+            }
+
+            alertClose.addEventListener('click', hideAlert);
+
             // Function to handle the payment
             function handlePayment() {
-                const companyName = document.getElementById('company').value;
-                const address = document.getElementById('address').value;
-                const email = document.getElementById('email').value;
+                const companyName = document.getElementById('company').value.trim();
+                const address = document.getElementById('address').value.trim();
+                const email = document.getElementById('email').value.trim();
+
+                if (!companyName || !address || !email || !usersSelect.value || !planSelect.value) {
+                    showAlert('Please fill in all required fields.');
+                    return;
+                }
 
                 const billTotal = parseFloat(billTotalElem.textContent.replace('₹', '').replace(',', ''));
 
@@ -474,11 +780,27 @@
                     key: 'rzp_test_h3SHdxttVW0pki', // Enter your Razorpay Key ID here
                     amount: billTotal * 100, // Amount in the smallest currency unit (i.e., paise for INR)
                     currency: 'INR',
-                    name: companyName,
+                    name: 'Techsaar.co.in',
                     description: 'Payment for subscription',
-                    image: 'https://ezdial.techsaar.co.in/assets/img/logo/EZDIAL_SHADOW.png',
+                    image: 'https://techsaar.co.in/assets/img/logo/ICON_WHITE.png',
                     handler: function(response) {
-                        alert('Payment successful!');
+                        if (response.razorpay_payment_id !== '') {
+                            const activation_Key = convertDateToBase64(futureDate);
+                            $('#key').empty();
+                            $('#key').append(activation_Key);
+                            $('body').addClass('h-screen');
+                            $('body').removeClass('overflow-x-hidden');
+                            $('body').addClass('overflow-hidden');
+                            $('.confetti').removeClass('hidden');
+                            let oneMinute = 60; // 1 minute = 60 seconds
+                            let display = document.querySelector('#timer');
+                            startTimer(oneMinute, display);
+
+                            setTimeout(() => {
+                                window.location.href = '../index.html';
+                            }, 60000);
+
+                        }
                         // You can also handle payment confirmation and processing here
                     },
                     prefill: {
