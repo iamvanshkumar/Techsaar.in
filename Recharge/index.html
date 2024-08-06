@@ -42,6 +42,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-A1LL8B6yXeA62lHRgiFgXv4mW4omlB8kLFH5k/J8CkPPkoJ6oXV4wOaE4bQ+l7RrBNF4J9/vdj/rhQpe6fH9jw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
     <script src="https://unpkg.com/rough-notation/lib/rough-notation.iife.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 </head>
 
 
@@ -225,7 +226,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="flex flex-col gap-4 col-span-2 p-4">
+                <div class="flex flex-col gap-4 col-span-2">
                     <div class="flex flex-col gap-4 rounded-md border border-gray-50 shadow-md p-4 bg-white">
                         <p class="text-sm flex items-center gap-1"><i class='bx bx-list-ul'></i> Company details</p>
                         <div>
@@ -309,6 +310,26 @@
                         <button id="pay-button" class="inline-flex items-center gap-1 justify-center rounded-md bg-black px-7 py-[14px] text-center text-white font-medium text-dark shadow-1 transition duration-300 ease-in-out hover:bg-gray-600">
                             Pay <span id="pay-amount"></span>
                         </button>
+                        <div class="grid grid-cols-7 items-center justify-between gap-4">
+                            <img src="https://d6xcmfyh68wv8.cloudfront.net/assets/trusted-badge/1st-fold/top-illustration-mob.svg" alt="">
+                            <img src="https://cdn.worldvectorlogo.com/logos/google-pay-1.svg" alt="">
+                            <img src="https://play-lh.googleusercontent.com/2tH3ybpe3Tb5y2vamr4s0IJ-ffW83ouOFl4qDeZ8qvKdil5OjMN5_kiQviniaIBz420=w240-h480-rw" alt="">
+                            <img src="https://cdn.worldvectorlogo.com/logos/phonepe-1.svg" alt="">
+                            <img src="https://static-00.iconduck.com/assets.00/mastercard-icon-2048x1286-s6y46dfh.png" alt="">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS82g8mkrlMMiQ17FGj5_VQAQ-P2gHUyXhYIQ&s" alt="">
+                            <a href="https://razorpay.com/" target="_blank"> <img referrerpolicy="origin" src="https://badges.razorpay.com/badge-dark.png " alt="Razorpay | Payment Gateway | Neobank"></a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-4 rounded-md border border-gray-50 shadow-md p-4 bg-white">
+                        <p class="text-sm flex items-center gap-1"><i class='bx bx-list-ul'></i> Terms and Conditions
+                        </p>
+
+                        <ul class="text-xs text-gray-600">
+                            <li>No Refund Policy: Once the payment is completed, it is non-refundable. Please ensure that you review all details carefully before proceeding with the payment.</li>
+                            <li>Invoice Delivery: You will receive your invoice within 24 hours of completing the payment. Please check your email for the invoice, and ensure that the provided email address is correct.</li>
+                        </ul>
+
                     </div>
 
 
@@ -395,6 +416,7 @@
             const taxAmountElem = document.getElementById('tax-amount');
             const billTotalElem = document.getElementById('bill-total');
             const payAmountElem = document.getElementById('pay-amount');
+            const payButton = document.getElementById('pay-button');
 
             const starterPlanPrice = 300;
             const basicPlanPrice = 250;
@@ -440,6 +462,43 @@
 
             usersSelect.addEventListener('change', updateBillDetails);
 
+            // Function to handle the payment
+            function handlePayment() {
+                const companyName = document.getElementById('company').value;
+                const address = document.getElementById('address').value;
+                const email = document.getElementById('email').value;
+
+                const billTotal = parseFloat(billTotalElem.textContent.replace('₹', '').replace(',', ''));
+
+                const razorpayOptions = {
+                    key: 'rzp_test_h3SHdxttVW0pki', // Enter your Razorpay Key ID here
+                    amount: billTotal * 100, // Amount in the smallest currency unit (i.e., paise for INR)
+                    currency: 'INR',
+                    name: companyName,
+                    description: 'Payment for subscription',
+                    image: 'https://ezdial.techsaar.co.in/assets/img/logo/EZDIAL_SHADOW.png',
+                    handler: function(response) {
+                        alert('Payment successful!');
+                        // You can also handle payment confirmation and processing here
+                    },
+                    prefill: {
+                        name: companyName,
+                        email: email,
+                        contact: '' // You can prefill the contact number if available
+                    },
+                    notes: {
+                        address: address
+                    },
+                    theme: {
+                        color: '#000000'
+                    }
+                };
+
+                const rzp = new Razorpay(razorpayOptions);
+                rzp.open();
+            }
+
+            payButton.addEventListener('click', handlePayment);
 
             // Initialize the options and bill details based on the default values
             updateUserOptions();
