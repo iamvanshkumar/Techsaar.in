@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $message = $_POST['message'];
 
     // Recipient email address
-    $to = 'business@techsaar.co.in'; // Replace with your email address
+    $to = 'business@techsaar.in'; // Replace with your email address
 
     // Email subject
     $email_subject = "New Form Submission: $subject";
@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                   "Message:\n$message";
 
     // Email headers
-    $headers = "From: demo@techsaar.co.in\n"; // Replace with your domain
+    $headers = "From: demo@techsaar.in\n"; // Replace with your domain
     $headers .= "Reply-To: $email";
 
     // Send the email

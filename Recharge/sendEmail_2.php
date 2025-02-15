@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $to = $email;
     $subject = 'Payment Invoice';
-    $cc = 'business@techsaar.co.in';
+    $cc = 'business@techsaar.in';
 
     // Generate today's date
     $invoiceDate = date('l, F j, Y g:i:s A');
@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     <body style=\"font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f8f9fa;\">
         <div style=\"max-width: 800px; margin: 0 auto; padding: 20px; background: #fff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\">
-            <img src=\"https://ezdial.techsaar.co.in/Recharge/invoice_banner.png\" style=\"height: 200px;\" alt=\"\">
+            <img src=\"https://ezdial.techsaar.in/Recharge/invoice_banner.png\" style=\"height: 200px;\" alt=\"\">
     
             <div style=\"display: flex; align-items: center; margin-bottom: 20px; margin-top: 20px;\">
                 <div>
@@ -44,10 +44,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <p style=\"font-weight: 700; margin: 5px 0;\"><span style=\"font-weight: 700;\">Invoice Date:</span>&nbsp;$invoiceDate</p>
                 </div>
                 <div style=\"gap: 4px;\">
-                    <img src=\"https://ezdial.techsaar.co.in/Recharge/ts_logo.png\" style=\"display:flex;justify-content:flex-end\" width=\"300px\" alt=\"Techsaar Logo\">
-                    <p style=\"text-align: end; margin: 0;\">www.techsaar.co.in</p>
+                    <img src=\"https://ezdial.techsaar.in/Recharge/ts_logo.png\" style=\"display:flex;justify-content:flex-end\" width=\"300px\" alt=\"Techsaar Logo\">
+                    <p style=\"text-align: end; margin: 0;\">www.techsaar.in</p>
                     <p style=\"text-align: end; margin: 0;\">Sahastradhara Road, Dehradun - 248008, Uttarakhand, India</p>
-                    <p style=\"text-align: end; margin: 0;\">business@techsaar.co.in, kumarvansh@techsaar.co.in</p>
+                    <p style=\"text-align: end; margin: 0;\">business@techsaar.in, kumarvansh@techsaar.in</p>
                     <p style=\"text-align: end; margin: 0;\">7536001034</p>
                 </div>
             </div>
@@ -103,7 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type: text/html; charset=UTF-8" . "\r\n";
     $headers .= "Cc: $cc" . "\r\n";  // Add CC header here
-    $headers .= 'From: no-reply@techsaar.co.in' . "\r\n";
+    $headers .= 'From: no-reply@techsaar.in' . "\r\n";
 
     // Send the email
     if (mail($to, $subject, $message, $headers)) {

@@ -14,13 +14,13 @@
     <meta property="og:title" content="EZDIAL - Premier Call Centre Solutions and Technology Services">
     <meta property="og:description" content="EZDIAL provides top-notch call center solutions including VOIP auto dialer technology, custom software development, tech support, website development, and startup growth services.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.ezdial.techsaar.co.in">
-    <meta property="og:image" content="https://www.ezdial.techsaar.co.in/assets/img/og-image.jpg">
+    <meta property="og:url" content="https://www.ezdial.techsaar.in">
+    <meta property="og:image" content="https://www.ezdial.techsaar.in/assets/img/og-image.jpg">
     <meta property="og:site_name" content="EZDIAL">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="EZDIAL - Premier Call Centre Solutions and Technology Services">
     <meta name="twitter:description" content="EZDIAL offers cutting-edge call center solutions, including VOIP auto dialers, custom software, tech support, and more to help businesses thrive.">
-    <meta name="twitter:image" content="https://www.ezdial.techsaar.co.in/assets/img/twitter-image.jpg">
+    <meta name="twitter:image" content="https://www.ezdial.techsaar.in/assets/img/twitter-image.jpg">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon/favicon-16x16.png">
@@ -511,18 +511,18 @@
 
                             <div class="flex items-center justify-between gap-2 text-sm text-gray-700">
                                 <span class="flex items-center gap-2">
-                                    <i class='bx bxs-offer text-gray-900 dark:text-gray-200'></i>
+                                    <i class='bx bxs-offer text-gray-900 '></i>
                                     Tax (2%)
                                 </span>
                                 <span id="tax-amount">₹60</span>
                             </div>
                             <hr>
                             <div class="flex items-center pt-3 justify-between font-semibold">
-                                <span class="flex items-center gap-2 text-md text-gray-600 dark:text-gray-100">
+                                <span class="flex items-center gap-2 text-md text-gray-600 ">
                                     Bill total
                                 </span>
                                 <span class="flex items-center gap-1">
-                                    <span id="bill-total" class="text-gray-800 dark:text-white">₹3060</span>
+                                    <span id="bill-total" class="text-gray-800 ">₹3060</span>
                                 </span>
                             </div>
                         </div>
@@ -595,13 +595,13 @@
                     <a target="_blank" href="https://wa.me/7536001034?text=I'm%20interested%20in%20your%20services" class="text-gray-200 hover:text-blue-500 ms-5">
                         <i class='bx bxl-whatsapp'></i>
                     </a>
-                    <a target="_blank" href="https://www.instagram.com/techsaar.co.in/" class="text-gray-200 hover:text-blue-500 ms-5 ">
+                    <a target="_blank" href="https://www.instagram.com/techsaar.in/" class="text-gray-200 hover:text-blue-500 ms-5 ">
                         <i class='bx bxl-instagram'></i>
                     </a>
                 </div>
             </div>
             <hr class="my-4 border-gray-200 " />
-            <div class="text-sm text-gray-100 text-center ">© 2024 <a href="https://techsaar.co.in/" target="_blank" class="hover:underline ">techsaar.co.in</a>. All Rights Reserved.
+            <div class="text-sm text-gray-100 text-center ">© 2025 <a href="https://techsaar.in/" target="_blank" class="hover:underline ">techsaar.in</a>. All Rights Reserved.
             </div>
         </div>
     </footer>
@@ -793,12 +793,12 @@
                 const billTotal = parseFloat(billTotalElem.textContent.replace('₹', '').replace(',', ''));
 
                 const razorpayOptions = {
-                    key: 'rzp_test_h3SHdxttVW0pki',
+                    key: 'rzp_live_ifwhSPTJjMBi5O',
                     amount: billTotal * 100,
                     currency: 'INR',
-                    name: 'Techsaar.co.in',
+                    name: 'techsaar.in',
                     description: 'Payment for subscription',
-                    image: 'https://techsaar.co.in/assets/img/logo/ICON_WHITE.png',
+                    image: 'https://techsaar.in/assets/img/logo/ICON_WHITE.png',
                     handler: function(response) {
                         const transactionID = response.razorpay_payment_id;
                         if (transactionID !== '') {

@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $to = $email;
     $subject = 'Payment ';
-    $cc = 'business@techsaar.co.in';
+    $cc = 'business@techsaar.in';
 
     // Inline CSS
     $message = "<html>
@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div>
                 <h1 style='text-align: center; font-size: 54px; margin: 0;'>THANK YOU!!</h1>
                 <h2 style='text-align: center; font-size: 24px; margin: 0;'>{$companyName}</h2>
-                <img src='https://ezdial.techsaar.co.in/assets/img/icons/confetti.gif' alt='icon' style='display: flex; justify-content: center; width: 50%; margin: auto'>
+                <img src='https://ezdial.techsaar.in/assets/img/icons/confetti.gif' alt='icon' style='display: flex; justify-content: center; width: 50%; margin: auto'>
                 <h2 style='text-align: center; font-size: 24px; margin: 0;'>FOR CHOOSING EZDIAL </h2>
             </div>
             <div style='text-align: center;'>
@@ -26,8 +26,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <p id='key' style='font-size: xx-large;font-weight:600;padding: 4px;text-align: center; border: 2px solid yellow;background: #ffe600;'>
                     $activationKey</p>
                 <p style='padding-top: 1rem; font-size: 0.75rem; text-align: center; color: #9ca3af;'>Note: Your invoice will be sent to you via email within 24 hours. If you have any questions or require assistance, please do not hesitate to contact us at +91 7536001034.</p>
-                <a href='https://techsaar.co.in/' target='_blank' style='text-decoration: none; color: #000000;'>Team
-                    Techsaar.co.in</a>
+                <a href='https://techsaar.in/' target='_blank' style='text-decoration: none; color: #000000;'>Team
+                    techsaar.in</a>
             </div>
         </div>
     </body>
@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
     // Additional headers
-    $headers .= 'From: no-reply@techsaar.co.in' . "\r\n";
+    $headers .= 'From: no-reply@techsaar.in' . "\r\n";
 
     // Send the email
     if (mail($to, $subject, $message, $headers)) {
